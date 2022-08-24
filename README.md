@@ -1,5 +1,5 @@
 # Prediction_Models_On_Rice_by_NPs
-This file is the supporting information for the in the paper:
+This file is the supporting information for the paper:
 
 Prediction Models on Biomass and Yield of Rice Affected by Metal (Oxide) Nanoparticles Using Nano-specific Descriptors,
 
