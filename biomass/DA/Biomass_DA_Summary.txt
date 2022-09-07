@@ -1,0 +1,100 @@
+Analysis
+Fields
+	Target
+		Output
+	Inputs
+		Circularity
+		Perimeter
+		Convexity
+		Extend
+		Diameter
+		Area
+		Circularity_#2
+		Convexity_#2
+		Eccentricity
+		Main_Elongation
+		Zeta_Prediction
+		Minimum_Ferets_Diameter
+		Maximum_Ferets_Diameter
+		Major_Axis
+		Minor_Axis
+		Boundary_Size
+		Boxivity
+		Roundness
+		Solidity
+		logD
+		solubility
+		Minimum_projection_area
+		Maximum_projection_area
+		Minimum_projection_radius
+		Polarizability
+		MaxEStateIndex
+		MinEStateIndex
+		MinAbsEStateIndex
+		FpDensityMorgan1
+		BalabanJ
+		Chi0v
+		HallKierAlpha
+		Kappa1
+		Kappa3
+		SlogP_VSA3
+		EState_VSA1
+		EState_VSA2
+		EState_VSA8
+		EState_VSA9
+		MolMR
+		Formation_Energy
+		Band_Gap
+		Volume
+		Count
+		Density
+		Amount_of_molecular_in_NP
+		NP_volume
+		Primary_size
+		Exposure_time
+		Plant_growth
+		NP_concentration
+		$CC-Output
+Build Settings
+	Use partitioned data: true
+	Partition: Partition
+	Calculate predictor importance: true
+	Calculate raw propensity scores: false
+	Calculate adjusted propensity scores: false
+	Method: Stepwise
+	Mode: Simple
+	Prior probabilities: Compute from group sizes
+	Means: false
+	Univariate ANOVAS: false
+	Box's M: false
+	Within-groups correlation: false
+	Within-group covariance: false
+	Separate-groups covariance: false
+	Total covariance: false
+	Fisher's: false
+	Unstandardized: false
+	Casewise results: false
+	Limit cases to first: 10
+	Summary table: false
+	Leave-one-out classification: false
+	Combined-groups: false
+	Separate-groups: false
+	Territorial map: false
+	Summary of Steps: false
+	F for pairwise distances: false
+	Method: Wilks' lambda
+	V-to-enter: 0.0
+	Criteria: Use F value
+	Entry: 3.84
+	Removal: 2.71
+	Entry: 0.05
+	Removal: 0.1
+	Use covariance matrix: Separate-groups
+Training Summary
+	Algorithm: Discriminant
+	Model type: Classification
+	Stream: F:\Article Archive\01 QSAR Rice biomass and yield\data analysis\model.str
+	User: dell
+	Date built: 9/7/22 9:21 AM
+	Application: IBM® SPSS® Modeler 18
+	Elapsed time for model build: 0 hours, 0 mins, 2 secs

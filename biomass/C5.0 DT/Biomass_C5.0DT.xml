@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header copyright="(C) Copyright IBM Corp. 1994, 2015">
+    <Application name="IBM SPSS Modeler" version="18"/>
+</Header>
+  <DataDictionary numberOfFields="11">
+    <DataField dataType="string" name="Application_mode" optype="categorical">
+      <Extension extender="spss" name="storageType" value="string"/>
+      <Value property="valid" value="Foliar application"/>
+      <Value property="valid" value="Root entry"/>
+      <Value property="valid" value="Seed priming"/>
+</DataField>
+    <DataField dataType="double" name="solubility" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Area" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Plant_growth" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Convexity_#2" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Eccentricity" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="EState_VSA2" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Convexity" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Perimeter" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Maximum_projection_area" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="string" name="Output" optype="categorical">
+      <Extension extender="spss" name="storageType" value="string"/>
+      <Value property="valid" value="Negative"/>
+      <Value property="valid" value="No effect"/>
+      <Value property="valid" value="Positive"/>
+</DataField>
+</DataDictionary>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 1">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField importance="0.118406" name="Application_mode" usageType="active"/>
+      <MiningField importance="0.156225" name="solubility" usageType="active"/>
+      <MiningField importance="0.121235" name="Area" usageType="active"/>
+      <MiningField importance="0.0550538" name="Plant_growth" usageType="active"/>
+      <MiningField importance="0.0828644" name="Convexity_#2" usageType="active"/>
+      <MiningField importance="0.104828" name="Eccentricity" usageType="active"/>
+      <MiningField importance="0.0550538" name="EState_VSA2" usageType="active"/>
+      <MiningField importance="0.0853987" name="Convexity" usageType="active"/>
+      <MiningField importance="0.0853987" name="Perimeter" usageType="active"/>
+      <MiningField importance="0.135536" name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="2" id="0" recordCount="140" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.30714285714285716" recordCount="43" value="Negative"/>
+      <ScoreDistribution confidence="0.3" recordCount="42" value="No effect"/>
+      <ScoreDistribution confidence="0.39285714285714285" recordCount="55" value="Positive"/>
+      <Node id="1" recordCount="50" score="Positive">
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.28" recordCount="14" value="No effect"/>
+        <ScoreDistribution confidence="0.72" recordCount="36" value="Positive"/>
+</Node>
+      <Node defaultChild="3" id="2" recordCount="90" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.4777777777777778" recordCount="43" value="Negative"/>
+        <ScoreDistribution confidence="0.3111111111111111" recordCount="28" value="No effect"/>
+        <ScoreDistribution confidence="0.2111111111111111" recordCount="19" value="Positive"/>
+        <Node defaultChild="4" id="3" recordCount="78" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.3974358974358974" recordCount="31" value="Negative"/>
+          <ScoreDistribution confidence="0.358974358974359" recordCount="28" value="No effect"/>
+          <ScoreDistribution confidence="0.24358974358974358" recordCount="19" value="Positive"/>
+          <Node defaultChild="6" id="4" recordCount="66" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.30303030303030304" recordCount="20" value="Negative"/>
+            <ScoreDistribution confidence="0.4090909090909091" recordCount="27" value="No effect"/>
+            <ScoreDistribution confidence="0.2878787878787879" recordCount="19" value="Positive"/>
+            <Node id="5" recordCount="6" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.047619"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="6" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node defaultChild="7" id="6" recordCount="60" score="No effect">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.047619"/>
+              <ScoreDistribution confidence="0.3333333333333333" recordCount="20" value="Negative"/>
+              <ScoreDistribution confidence="0.35" recordCount="21" value="No effect"/>
+              <ScoreDistribution confidence="0.31666666666666665" recordCount="19" value="Positive"/>
+              <Node defaultChild="9" id="7" recordCount="50" score="No effect">
+                <Extension extender="spss" name="defaultChild" value="1"/>
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="0"/>
+                <ScoreDistribution confidence="0.38" recordCount="19" value="Negative"/>
+                <ScoreDistribution confidence="0.42" recordCount="21" value="No effect"/>
+                <ScoreDistribution confidence="0.2" recordCount="10" value="Positive"/>
+                <Node id="8" recordCount="10" score="Negative">
+                  <SimplePredicate field="Eccentricity" operator="lessOrEqual" value="-0.457143"/>
+                  <ScoreDistribution confidence="0.8" recordCount="8" value="Negative"/>
+                  <ScoreDistribution confidence="0.2" recordCount="2" value="No effect"/>
+                  <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+                <Node id="9" recordCount="40" score="No effect">
+                  <SimplePredicate field="Eccentricity" operator="greaterThan" value="-0.457143"/>
+                  <ScoreDistribution confidence="0.275" recordCount="11" value="Negative"/>
+                  <ScoreDistribution confidence="0.475" recordCount="19" value="No effect"/>
+                  <ScoreDistribution confidence="0.25" recordCount="10" value="Positive"/>
+</Node>
+</Node>
+              <Node id="10" recordCount="10" score="Positive">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="0"/>
+                <ScoreDistribution confidence="0.1" recordCount="1" value="Negative"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                <ScoreDistribution confidence="0.9" recordCount="9" value="Positive"/>
+</Node>
+</Node>
+</Node>
+          <Node id="11" recordCount="12" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.9166666666666666" recordCount="11" value="Negative"/>
+            <ScoreDistribution confidence="0.08333333333333333" recordCount="1" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="12" recordCount="12" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="12" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 2">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="21" id="13" recordCount="140.0000008" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.3072271839587018" recordCount="43.011806" value="Negative"/>
+      <ScoreDistribution confidence="0.3208555481665397" recordCount="44.919777" value="No effect"/>
+      <ScoreDistribution confidence="0.3719172621604727" recordCount="52.068417" value="Positive"/>
+      <Node defaultChild="16" id="14" recordCount="50.0393502" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.3909743416292404" recordCount="19.564102" value="No effect"/>
+        <ScoreDistribution confidence="0.6090256543739051" recordCount="30.475248" value="Positive"/>
+        <Node id="15" recordCount="7.6188121" score="Positive">
+          <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.380952"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="1.0" recordCount="7.6188121" value="Positive"/>
+</Node>
+        <Node defaultChild="18" id="16" recordCount="42.4205381" score="Positive">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.380952"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.461194102580231" recordCount="19.564102" value="No effect"/>
+          <ScoreDistribution confidence="0.5388058950624202" recordCount="22.856436" value="Positive"/>
+          <Node id="17" recordCount="12.4023869" score="Positive">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Foliar application"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.11267475456680037" recordCount="1.3974359" value="No effect"/>
+            <ScoreDistribution confidence="0.8873252454331997" recordCount="11.004951" value="Positive"/>
+</Node>
+          <Node defaultChild="19" id="18" recordCount="30.0181512" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Seed priming"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.6051893695571765" recordCount="18.166666" value="No effect"/>
+            <ScoreDistribution confidence="0.39481062378018805" recordCount="11.851485" value="Positive"/>
+            <Node id="19" recordCount="24.3880421" score="No effect">
+              <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.6876005023789917" recordCount="16.76923" value="No effect"/>
+              <ScoreDistribution confidence="0.3123994976210083" recordCount="7.6188121" value="Positive"/>
+</Node>
+            <Node id="20" recordCount="5.6301091" score="Positive">
+              <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.2482076057815647" recordCount="1.3974359" value="No effect"/>
+              <ScoreDistribution confidence="0.7517923942184352" recordCount="4.2326732" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</Node>
+      <Node defaultChild="22" id="21" recordCount="89.9606506" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.4781179961808769" recordCount="43.011806" value="Negative"/>
+        <ScoreDistribution confidence="0.28185295271752964" recordCount="25.355675" value="No effect"/>
+        <ScoreDistribution confidence="0.240029055547982" recordCount="21.59317" value="Positive"/>
+        <Node defaultChild="23" id="22" recordCount="79.80223459999999" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.41168508832708806" recordCount="32.85339" value="Negative"/>
+          <ScoreDistribution confidence="0.3177313909452857" recordCount="25.355675" value="No effect"/>
+          <ScoreDistribution confidence="0.27058352574001737" recordCount="21.59317" value="Positive"/>
+          <Node defaultChild="24" id="23" recordCount="74.17212529999999" score="Negative">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="5.53801"/>
+            <ScoreDistribution confidence="0.4429344564028557" recordCount="32.85339" value="Negative"/>
+            <ScoreDistribution confidence="0.26594310086460476" recordCount="19.725565" value="No effect"/>
+            <ScoreDistribution confidence="0.2911224386878935" recordCount="21.59317" value="Positive"/>
+            <Node defaultChild="25" id="24" recordCount="65.7471444" score="Negative">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="5"/>
+              <ScoreDistribution confidence="0.4784383304714296" recordCount="31.455954" value="Negative"/>
+              <ScoreDistribution confidence="0.3000216234486376" recordCount="19.725565" value="No effect"/>
+              <ScoreDistribution confidence="0.2215400552058045" recordCount="14.565626" value="Positive"/>
+              <Node id="25" recordCount="58.974867" score="Negative">
+                <SimplePredicate field="Convexity" operator="lessOrEqual" value="0.727273"/>
+                <ScoreDistribution confidence="0.5333789731140893" recordCount="31.455954" value="Negative"/>
+                <ScoreDistribution confidence="0.2770574455047096" recordCount="16.339426" value="No effect"/>
+                <ScoreDistribution confidence="0.1895635813812009" recordCount="11.179487" value="Positive"/>
+</Node>
+              <Node id="26" recordCount="6.7722774" score="No effect">
+                <SimplePredicate field="Convexity" operator="greaterThan" value="0.727273"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+                <ScoreDistribution confidence="0.5" recordCount="3.3861387" value="No effect"/>
+                <ScoreDistribution confidence="0.5" recordCount="3.3861387" value="Positive"/>
+</Node>
+</Node>
+            <Node id="27" recordCount="8.4249809" score="Positive">
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="5"/>
+              <ScoreDistribution confidence="0.16586813864468228" recordCount="1.3974359" value="Negative"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+              <ScoreDistribution confidence="0.8341318613553178" recordCount="7.027545" value="Positive"/>
+</Node>
+</Node>
+          <Node id="28" recordCount="5.6301093" score="No effect">
+            <SimplePredicate field="EState_VSA2" operator="greaterThan" value="5.53801"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="1.0" recordCount="5.6301093" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="29" recordCount="10.158416" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="10.158416" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 3">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="32" id="30" recordCount="139.99999939999998" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.26786510114799333" recordCount="37.501114" value="Negative"/>
+      <ScoreDistribution confidence="0.3541010158032901" recordCount="49.574142" value="No effect"/>
+      <ScoreDistribution confidence="0.378033887334431" recordCount="52.924744" value="Positive"/>
+      <Node id="31" recordCount="48.055605" score="Positive">
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.371698618714716" recordCount="17.862202" value="No effect"/>
+        <ScoreDistribution confidence="0.628301381285284" recordCount="30.193403" value="Positive"/>
+</Node>
+      <Node defaultChild="33" id="32" recordCount="91.9443944" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.407867322904462" recordCount="37.501114" value="Negative"/>
+        <ScoreDistribution confidence="0.3449034517758486" recordCount="31.711939" value="No effect"/>
+        <ScoreDistribution confidence="0.24722921009309515" recordCount="22.73134" value="Positive"/>
+        <Node defaultChild="34" id="33" recordCount="83.2104724" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.34571601590859374" recordCount="28.767193" value="Negative"/>
+          <ScoreDistribution confidence="0.3811051432031048" recordCount="31.711939" value="No effect"/>
+          <ScoreDistribution confidence="0.27317883608121424" recordCount="22.73134" value="Positive"/>
+          <Node defaultChild="36" id="34" recordCount="73.4821341" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.2825325809365681" recordCount="20.761097" value="Negative"/>
+            <ScoreDistribution confidence="0.40812229213685836" recordCount="29.989697" value="No effect"/>
+            <ScoreDistribution confidence="0.30934512556569854" recordCount="22.73134" value="Positive"/>
+            <Node id="35" recordCount="7.0280528" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.047619"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="7.0280528" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node defaultChild="37" id="36" recordCount="66.4540813" score="No effect">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.047619"/>
+              <ScoreDistribution confidence="0.3124126704314247" recordCount="20.761097" value="Negative"/>
+              <ScoreDistribution confidence="0.34552645301561036" recordCount="22.961643" value="No effect"/>
+              <ScoreDistribution confidence="0.34206085699058486" recordCount="22.73134" value="Positive"/>
+              <Node defaultChild="38" id="37" recordCount="61.3592937" score="No effect">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="0.5"/>
+                <ScoreDistribution confidence="0.3383529331596592" recordCount="20.761097" value="Negative"/>
+                <ScoreDistribution confidence="0.374216220810247" recordCount="22.961643" value="No effect"/>
+                <ScoreDistribution confidence="0.28743083462187896" recordCount="17.636553" value="Positive"/>
+                <Node defaultChild="40" id="38" recordCount="53.108901700000004" score="No effect">
+                  <Extension extender="spss" name="defaultChild" value="1"/>
+                  <SimplePredicate field="Eccentricity" operator="lessOrEqual" value="1.14286"/>
+                  <ScoreDistribution confidence="0.31324127344926805" recordCount="16.6359" value="Negative"/>
+                  <ScoreDistribution confidence="0.432350176053443" recordCount="22.961643" value="No effect"/>
+                  <ScoreDistribution confidence="0.25440851848758905" recordCount="13.511357" value="Positive"/>
+                  <Node id="39" recordCount="22.913704900000003" score="Negative">
+                    <SimplePredicate field="Eccentricity" operator="lessOrEqual" value="-0.342857"/>
+                    <ScoreDistribution confidence="0.568719552637688" recordCount="13.031472" value="Negative"/>
+                    <ScoreDistribution confidence="0.2809561364299494" recordCount="6.437746" value="No effect"/>
+                    <ScoreDistribution confidence="0.15032431093236256" recordCount="3.4444869" value="Positive"/>
+</Node>
+                  <Node id="40" recordCount="30.1951968" score="No effect">
+                    <SimplePredicate field="Eccentricity" operator="greaterThan" value="-0.342857"/>
+                    <ScoreDistribution confidence="0.11937093253189196" recordCount="3.6044288" value="Negative"/>
+                    <ScoreDistribution confidence="0.5472359431682856" recordCount="16.523897" value="No effect"/>
+                    <ScoreDistribution confidence="0.33339312429982243" recordCount="10.066871" value="Positive"/>
+</Node>
+</Node>
+                <Node id="41" recordCount="8.250392" score="Negative">
+                  <SimplePredicate field="Eccentricity" operator="greaterThan" value="1.14286"/>
+                  <ScoreDistribution confidence="0.5" recordCount="4.125196" value="Negative"/>
+                  <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                  <ScoreDistribution confidence="0.5" recordCount="4.125196" value="Positive"/>
+</Node>
+</Node>
+              <Node id="42" recordCount="5.0947876" score="Positive">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="0.5"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                <ScoreDistribution confidence="1.0" recordCount="5.0947876" value="Positive"/>
+</Node>
+</Node>
+</Node>
+          <Node id="43" recordCount="9.7283383" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.8229663333151152" recordCount="8.0060949" value="Negative"/>
+            <ScoreDistribution confidence="0.1770336666848849" recordCount="1.7222434" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="44" recordCount="8.733922" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="8.733922" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 4">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="51" id="45" recordCount="140.0000005" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.2557168705152969" recordCount="35.800362" value="Negative"/>
+      <ScoreDistribution confidence="0.37987994864328595" recordCount="53.183193" value="No effect"/>
+      <ScoreDistribution confidence="0.3644031772699886" recordCount="51.016445" value="Positive"/>
+      <Node defaultChild="48" id="46" recordCount="48.9016249" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.4582581263061465" recordCount="22.409567" value="No effect"/>
+        <ScoreDistribution confidence="0.5417418757387753" recordCount="26.492058" value="Positive"/>
+        <Node id="47" recordCount="5.7474365" score="Positive">
+          <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.380952"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.7474365" value="Positive"/>
+</Node>
+        <Node defaultChild="50" id="48" recordCount="43.1541884" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.380952"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5192906605561373" recordCount="22.409567" value="No effect"/>
+          <ScoreDistribution confidence="0.4807093301747739" recordCount="20.744621" value="Positive"/>
+          <Node id="49" recordCount="10.348907400000002" score="Positive">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Foliar application"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.19780399233256254" recordCount="2.0470552" value="No effect"/>
+            <ScoreDistribution confidence="0.8021960076674374" recordCount="8.3018522" value="Positive"/>
+</Node>
+          <Node id="50" recordCount="32.805281" score="No effect">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Seed priming"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.6207083853358853" recordCount="20.362513" value="No effect"/>
+            <ScoreDistribution confidence="0.37929161466411454" recordCount="12.442768" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node defaultChild="52" id="51" recordCount="91.0983756" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.3929857339849208" recordCount="35.800362" value="Negative"/>
+        <ScoreDistribution confidence="0.3378065283526307" recordCount="30.773626" value="No effect"/>
+        <ScoreDistribution confidence="0.2692077530304503" recordCount="24.524389" value="Positive"/>
+        <Node defaultChild="54" id="52" recordCount="83.4351271" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.3372334048976357" recordCount="28.137112" value="Negative"/>
+          <ScoreDistribution confidence="0.3688329732286103" recordCount="30.773626" value="No effect"/>
+          <ScoreDistribution confidence="0.29393362067521794" recordCount="24.524389" value="Positive"/>
+          <Node id="53" recordCount="5.2485199" score="No effect">
+            <SimplePredicate field="Area" operator="lessOrEqual" value="-0.108352"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="1.0" recordCount="5.2485199" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+          <Node defaultChild="55" id="54" recordCount="78.1866072" score="Negative">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Area" operator="greaterThan" value="-0.108352"/>
+            <ScoreDistribution confidence="0.3598712491517345" recordCount="28.137112" value="Negative"/>
+            <ScoreDistribution confidence="0.32646391644424755" recordCount="25.525106" value="No effect"/>
+            <ScoreDistribution confidence="0.31366483184603516" recordCount="24.524389" value="Positive"/>
+            <Node defaultChild="57" id="55" recordCount="69.1149076" score="Positive">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+              <ScoreDistribution confidence="0.3054690765440595" recordCount="21.112467" value="Negative"/>
+              <ScoreDistribution confidence="0.3396959182218454" recordCount="23.478052" value="No effect"/>
+              <ScoreDistribution confidence="0.35483501102155857" recordCount="24.524389" value="Positive"/>
+              <Node id="56" recordCount="5.1387486" score="No effect">
+                <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.047619"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+                <ScoreDistribution confidence="1.0" recordCount="5.1387486" value="No effect"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+              <Node defaultChild="58" id="57" recordCount="63.976158999999996" score="Positive">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.047619"/>
+                <ScoreDistribution confidence="0.33000522897912643" recordCount="21.112467" value="Negative"/>
+                <ScoreDistribution confidence="0.2866583784750191" recordCount="18.339302" value="No effect"/>
+                <ScoreDistribution confidence="0.38333637691503175" recordCount="24.524389" value="Positive"/>
+                <Node defaultChild="60" id="58" recordCount="55.2570309" score="Positive">
+                  <Extension extender="spss" name="defaultChild" value="1"/>
+                  <SimplePredicate field="Eccentricity" operator="lessOrEqual" value="1.14286"/>
+                  <ScoreDistribution confidence="0.2897882086531001" recordCount="16.012836" value="Negative"/>
+                  <ScoreDistribution confidence="0.3318908327374499" recordCount="18.339302" value="No effect"/>
+                  <ScoreDistribution confidence="0.37832094232193" recordCount="20.904892" value="Positive"/>
+                  <Node id="59" recordCount="11.0135734" score="Negative">
+                    <SimplePredicate field="Eccentricity" operator="lessOrEqual" value="-0.457143"/>
+                    <ScoreDistribution confidence="0.5595842308546288" recordCount="6.163022" value="Negative"/>
+                    <ScoreDistribution confidence="0.32444903849281104" recordCount="3.5733433" value="No effect"/>
+                    <ScoreDistribution confidence="0.11596673065256004" recordCount="1.2772081" value="Positive"/>
+</Node>
+                  <Node id="60" recordCount="44.2434575" score="Positive">
+                    <SimplePredicate field="Eccentricity" operator="greaterThan" value="-0.457143"/>
+                    <ScoreDistribution confidence="0.22262757154546522" recordCount="9.8498135" value="Negative"/>
+                    <ScoreDistribution confidence="0.3337433562917184" recordCount="14.76596" value="No effect"/>
+                    <ScoreDistribution confidence="0.4436290721628164" recordCount="19.627684" value="Positive"/>
+</Node>
+</Node>
+                <Node id="61" recordCount="8.7191281" score="Negative">
+                  <SimplePredicate field="Eccentricity" operator="greaterThan" value="1.14286"/>
+                  <ScoreDistribution confidence="0.5848785843621221" recordCount="5.0996313" value="Negative"/>
+                  <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                  <ScoreDistribution confidence="0.4151214156378778" recordCount="3.6194968" value="Positive"/>
+</Node>
+</Node>
+</Node>
+            <Node id="62" recordCount="9.071699599999999" score="Negative">
+              <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+              <ScoreDistribution confidence="0.7743471135221454" recordCount="7.0246444" value="Negative"/>
+              <ScoreDistribution confidence="0.22565288647785475" recordCount="2.0470552" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+        <Node id="63" recordCount="7.6632485" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="7.6632485" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 5">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="70" id="64" recordCount="140.00000043" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.24805227066669658" recordCount="34.727318" value="Negative"/>
+      <ScoreDistribution confidence="0.38323679882291556" recordCount="53.653152" value="No effect"/>
+      <ScoreDistribution confidence="0.3687109274389593" recordCount="51.61953" value="Positive"/>
+      <Node defaultChild="67" id="65" recordCount="48.495626400000006" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.4195340798814797" recordCount="20.345568" value="No effect"/>
+        <ScoreDistribution confidence="0.5804659324907698" recordCount="28.150059" value="Positive"/>
+        <Node id="66" recordCount="5.0995016" score="Positive">
+          <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.380952"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.0995016" value="Positive"/>
+</Node>
+        <Node defaultChild="69" id="67" recordCount="43.3961248" score="Positive">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.380952"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.4688337517178492" recordCount="20.345568" value="No effect"/>
+          <ScoreDistribution confidence="0.5311662759343894" recordCount="23.050558" value="Positive"/>
+          <Node id="68" recordCount="9.6445618" score="Positive">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Foliar application"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.23625910095780608" recordCount="2.2786155" value="No effect"/>
+            <ScoreDistribution confidence="0.7637408990421939" recordCount="7.3659463" value="Positive"/>
+</Node>
+          <Node id="69" recordCount="33.751563000000004" score="No effect">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Seed priming"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5352923063148216" recordCount="18.066952" value="No effect"/>
+            <ScoreDistribution confidence="0.46470769368517834" recordCount="15.684611" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node defaultChild="71" id="70" recordCount="91.50437403" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.37951538785036154" recordCount="34.727318" value="Negative"/>
+        <ScoreDistribution confidence="0.3639999437521971" recordCount="33.307587" value="No effect"/>
+        <ScoreDistribution confidence="0.2564846899264669" recordCount="23.469471" value="Positive"/>
+        <Node defaultChild="72" id="71" recordCount="84.70503903" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.3297086256002874" recordCount="27.927982" value="Negative"/>
+          <ScoreDistribution confidence="0.3932184835922624" recordCount="33.307587" value="No effect"/>
+          <ScoreDistribution confidence="0.27707290225895315" recordCount="23.469471" value="Positive"/>
+          <Node defaultChild="74" id="72" recordCount="76.19369933" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.28473820264371724" recordCount="21.695257" value="Negative"/>
+            <ScoreDistribution confidence="0.40723801669756776" recordCount="31.028971" value="No effect"/>
+            <ScoreDistribution confidence="0.3080237763276482" recordCount="23.469471" value="Positive"/>
+            <Node id="73" recordCount="5.4713206" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.047619"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="5.4713206" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node defaultChild="75" id="74" recordCount="70.72237873" score="No effect">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.047619"/>
+              <ScoreDistribution confidence="0.3067665057311909" recordCount="21.695257" value="Negative"/>
+              <ScoreDistribution confidence="0.3613799543928321" recordCount="25.55765" value="No effect"/>
+              <ScoreDistribution confidence="0.33185352955392594" recordCount="23.469471" value="Positive"/>
+              <Node defaultChild="76" id="75" recordCount="63.3457079" score="No effect">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="0"/>
+                <ScoreDistribution confidence="0.3277240508981667" recordCount="20.759912" value="Negative"/>
+                <ScoreDistribution confidence="0.4034630103170731" recordCount="25.55765" value="No effect"/>
+                <ScoreDistribution confidence="0.26881295614978834" recordCount="17.028147" value="Positive"/>
+                <Node id="76" recordCount="54.506804" score="No effect">
+                  <SimplePredicate field="Eccentricity" operator="lessOrEqual" value="1.14286"/>
+                  <ScoreDistribution confidence="0.29785613553860174" recordCount="16.235186" value="Negative"/>
+                  <ScoreDistribution confidence="0.46888916840547096" recordCount="25.55765" value="No effect"/>
+                  <ScoreDistribution confidence="0.23325469605592725" recordCount="12.713968" value="Positive"/>
+</Node>
+                <Node id="77" recordCount="8.8389039" score="Negative">
+                  <SimplePredicate field="Eccentricity" operator="greaterThan" value="1.14286"/>
+                  <ScoreDistribution confidence="0.511910351237103" recordCount="4.5247264" value="Negative"/>
+                  <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                  <ScoreDistribution confidence="0.488089648762897" recordCount="4.3141775" value="Positive"/>
+</Node>
+</Node>
+              <Node id="78" recordCount="7.37667083" score="Positive">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="0"/>
+                <ScoreDistribution confidence="0.126797867433106" recordCount="0.93534613" value="Negative"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                <ScoreDistribution confidence="0.8732021325668939" recordCount="6.4413247" value="Positive"/>
+</Node>
+</Node>
+</Node>
+          <Node id="79" recordCount="8.5113397" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.7322847424360233" recordCount="6.2327242" value="Negative"/>
+            <ScoreDistribution confidence="0.2677152575639766" recordCount="2.2786155" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="80" recordCount="6.799335" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="6.799335" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 6">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="83" id="81" recordCount="139.99999839999998" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.25861876724135735" recordCount="36.206627" value="Negative"/>
+      <ScoreDistribution confidence="0.3539344040449646" recordCount="49.550816" value="No effect"/>
+      <ScoreDistribution confidence="0.3874468472851069" recordCount="54.242558" value="Positive"/>
+      <Node id="82" recordCount="48.433244" score="Positive">
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.38989135231164773" recordCount="18.883703" value="No effect"/>
+        <ScoreDistribution confidence="0.6101086476883523" recordCount="29.549541" value="Positive"/>
+</Node>
+      <Node defaultChild="84" id="83" recordCount="91.5667544" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.3954123659536414" recordCount="36.206627" value="Negative"/>
+        <ScoreDistribution confidence="0.3349153543876182" recordCount="30.667112" value="No effect"/>
+        <ScoreDistribution confidence="0.269672286211337" recordCount="24.693016" value="Positive"/>
+        <Node defaultChild="85" id="84" recordCount="85.38566829999999" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.3516461438763489" recordCount="30.025541" value="Negative"/>
+          <ScoreDistribution confidence="0.3591599458149349" recordCount="30.667112" value="No effect"/>
+          <ScoreDistribution confidence="0.2891939185068134" recordCount="24.693016" value="Positive"/>
+          <Node defaultChild="87" id="85" recordCount="78.9695986" score="Negative">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+            <ScoreDistribution confidence="0.35181809826243693" recordCount="27.782934" value="Negative"/>
+            <ScoreDistribution confidence="0.3354917521386515" recordCount="26.493649" value="No effect"/>
+            <ScoreDistribution confidence="0.312690154664152" recordCount="24.693016" value="Positive"/>
+            <Node id="86" recordCount="10.5239079" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.047619"/>
+              <ScoreDistribution confidence="0.2936687615823776" recordCount="3.090543" value="Negative"/>
+              <ScoreDistribution confidence="0.7063312384176225" recordCount="7.4333649" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node defaultChild="88" id="87" recordCount="68.4456907" score="Positive">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.047619"/>
+              <ScoreDistribution confidence="0.36075889873370803" recordCount="24.692392" value="Negative"/>
+              <ScoreDistribution confidence="0.27847310480862747" recordCount="19.060284" value="No effect"/>
+              <ScoreDistribution confidence="0.36076801545082515" recordCount="24.693016" value="Positive"/>
+              <Node defaultChild="89" id="88" recordCount="58.8983393" score="Negative">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="0"/>
+                <ScoreDistribution confidence="0.3565579140191479" recordCount="21.000669" value="Negative"/>
+                <ScoreDistribution confidence="0.3236132669703303" recordCount="19.060284" value="No effect"/>
+                <ScoreDistribution confidence="0.3198288308954069" recordCount="18.837387" value="Positive"/>
+                <Node id="89" recordCount="45.559765" score="Negative">
+                  <SimplePredicate field="solubility" operator="lessOrEqual" value="0.0650799"/>
+                  <ScoreDistribution confidence="0.41839318091302713" recordCount="19.061895" value="Negative"/>
+                  <ScoreDistribution confidence="0.299652511377089" recordCount="13.652098" value="No effect"/>
+                  <ScoreDistribution confidence="0.28195430770988394" recordCount="12.845772" value="Positive"/>
+</Node>
+                <Node id="90" recordCount="13.338574300000001" score="Positive">
+                  <SimplePredicate field="solubility" operator="greaterThan" value="0.0650799"/>
+                  <ScoreDistribution confidence="0.14535081159311006" recordCount="1.9387726" value="Negative"/>
+                  <ScoreDistribution confidence="0.40545453947053395" recordCount="5.4081855" value="No effect"/>
+                  <ScoreDistribution confidence="0.4491946489363559" recordCount="5.9916162" value="Positive"/>
+</Node>
+</Node>
+              <Node id="91" recordCount="9.5473514" score="Positive">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="0"/>
+                <ScoreDistribution confidence="0.3866750835210695" recordCount="3.6917229" value="Negative"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                <ScoreDistribution confidence="0.6133249164789305" recordCount="5.8556285" value="Positive"/>
+</Node>
+</Node>
+</Node>
+          <Node id="92" recordCount="6.4160697" score="No effect">
+            <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+            <ScoreDistribution confidence="0.34952961935560023" recordCount="2.2426064" value="Negative"/>
+            <ScoreDistribution confidence="0.6504703806443998" recordCount="4.1734633" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="93" recordCount="6.1810861" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="6.1810861" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 7">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="96" id="94" recordCount="140.000001" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.25817946958443233" recordCount="36.145126" value="Negative"/>
+      <ScoreDistribution confidence="0.36599079738578" recordCount="51.238712" value="No effect"/>
+      <ScoreDistribution confidence="0.37582974731550184" recordCount="52.616165" value="Positive"/>
+      <Node id="95" recordCount="47.986215" score="Positive">
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.4166576171927709" recordCount="19.993822" value="No effect"/>
+        <ScoreDistribution confidence="0.583342382807229" recordCount="27.992393" value="Positive"/>
+</Node>
+      <Node defaultChild="97" id="96" recordCount="92.01378600000001" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.39282294068412743" recordCount="36.145126" value="Negative"/>
+        <ScoreDistribution confidence="0.3395674643797397" recordCount="31.244888" value="No effect"/>
+        <ScoreDistribution confidence="0.2676095949361327" recordCount="24.623772" value="Positive"/>
+        <Node defaultChild="98" id="97" recordCount="86.1584198" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.351558896626839" recordCount="30.289759" value="Negative"/>
+          <ScoreDistribution confidence="0.36264462686907356" recordCount="31.244888" value="No effect"/>
+          <ScoreDistribution confidence="0.28579646721886603" recordCount="24.623772" value="Positive"/>
+          <Node defaultChild="99" id="98" recordCount="77.2902567" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.3073030031740081" recordCount="23.751528" value="Negative"/>
+            <ScoreDistribution confidence="0.37410869409106257" recordCount="28.914957" value="No effect"/>
+            <ScoreDistribution confidence="0.31858830661640175" recordCount="24.623772" value="Positive"/>
+            <Node defaultChild="100" id="99" recordCount="70.8562298" score="No effect">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+              <ScoreDistribution confidence="0.30019996914936053" recordCount="21.271038" value="Negative"/>
+              <ScoreDistribution confidence="0.3522826443130905" recordCount="24.96142" value="No effect"/>
+              <ScoreDistribution confidence="0.3475173893601661" recordCount="24.623772" value="Positive"/>
+              <Node defaultChild="101" id="100" recordCount="63.760434499999995" score="No effect">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="5"/>
+                <ScoreDistribution confidence="0.309077489112782" recordCount="19.706915" value="Negative"/>
+                <ScoreDistribution confidence="0.3914876081968984" recordCount="24.96142" value="No effect"/>
+                <ScoreDistribution confidence="0.2994348791647585" recordCount="19.092098" value="Positive"/>
+                <Node id="101" recordCount="40.260328599999994" score="No effect">
+                  <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="0.190476"/>
+                  <ScoreDistribution confidence="0.24141426406539565" recordCount="9.7194176" value="Negative"/>
+                  <ScoreDistribution confidence="0.47449741878162416" recordCount="19.103422" value="No effect"/>
+                  <ScoreDistribution confidence="0.2840883171529802" recordCount="11.437489" value="Positive"/>
+</Node>
+                <Node id="102" recordCount="23.5001059" score="Negative">
+                  <SimplePredicate field="Plant_growth" operator="greaterThan" value="0.190476"/>
+                  <ScoreDistribution confidence="0.42499801245576513" recordCount="9.9874983" value="Negative"/>
+                  <ScoreDistribution confidence="0.24927540432913536" recordCount="5.8579984" value="No effect"/>
+                  <ScoreDistribution confidence="0.32572658321509945" recordCount="7.6546092" value="Positive"/>
+</Node>
+</Node>
+              <Node id="103" recordCount="7.0957953" score="Positive">
+                <SimplePredicate field="Plant_growth" operator="greaterThan" value="5"/>
+                <ScoreDistribution confidence="0.2204294563006912" recordCount="1.5641223" value="Negative"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                <ScoreDistribution confidence="0.7795705436993088" recordCount="5.531673" value="Positive"/>
+</Node>
+</Node>
+            <Node id="104" recordCount="6.4340269" score="No effect">
+              <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+              <ScoreDistribution confidence="0.3855266753702879" recordCount="2.480489" value="Negative"/>
+              <ScoreDistribution confidence="0.614473324629712" recordCount="3.9535379" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+          <Node id="105" recordCount="8.8681631" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.7372701343302989" recordCount="6.5382318" value="Negative"/>
+            <ScoreDistribution confidence="0.2627298656697011" recordCount="2.3299313" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="106" recordCount="5.8553662" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.8553662" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 8">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="113" id="107" recordCount="140.0000013" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.25803955474677553" recordCount="36.125538" value="Negative"/>
+      <ScoreDistribution confidence="0.37078745369983074" recordCount="51.910244" value="No effect"/>
+      <ScoreDistribution confidence="0.3711729822676794" recordCount="51.964218" value="Positive"/>
+      <Node defaultChild="110" id="108" recordCount="47.8566106" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.448271863197934" recordCount="21.452772" value="No effect"/>
+        <ScoreDistribution confidence="0.5517281451603678" recordCount="26.403839" value="Positive"/>
+        <Node id="109" recordCount="6.0393791" score="Positive">
+          <SimplePredicate field="Perimeter" operator="lessOrEqual" value="-0.282383"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="1.0" recordCount="6.0393791" value="Positive"/>
+</Node>
+        <Node defaultChild="111" id="110" recordCount="41.817231500000005" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="Perimeter" operator="greaterThan" value="-0.282383"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5130127277794561" recordCount="21.452772" value="No effect"/>
+          <ScoreDistribution confidence="0.4869872841773372" recordCount="20.36446" value="Positive"/>
+          <Node id="111" recordCount="33.686505000000004" score="No effect">
+            <SimplePredicate field="Maximum_projection_area" operator="lessOrEqual" value="0.126157"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5948429794067387" recordCount="20.038181" value="No effect"/>
+            <ScoreDistribution confidence="0.40515702059326125" recordCount="13.648324" value="Positive"/>
+</Node>
+          <Node id="112" recordCount="8.1307265" score="Positive">
+            <SimplePredicate field="Maximum_projection_area" operator="greaterThan" value="0.126157"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.17398088596388034" recordCount="1.414591" value="No effect"/>
+            <ScoreDistribution confidence="0.8260191140361197" recordCount="6.7161355" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node defaultChild="114" id="113" recordCount="92.14339070000001" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.39205783209798895" recordCount="36.125538" value="Negative"/>
+        <ScoreDistribution confidence="0.33054429372111216" recordCount="30.457472" value="No effect"/>
+        <ScoreDistribution confidence="0.27739787743669386" recordCount="25.560381" value="Positive"/>
+        <Node defaultChild="115" id="114" recordCount="86.62031320000001" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.3532942778599881" recordCount="30.602461" value="Negative"/>
+          <ScoreDistribution confidence="0.35162043260771764" recordCount="30.457472" value="No effect"/>
+          <ScoreDistribution confidence="0.29508529876800305" recordCount="25.560381" value="Positive"/>
+          <Node defaultChild="116" id="115" recordCount="78.01898070000001" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.3131964783538885" recordCount="24.43527" value="Negative"/>
+            <ScoreDistribution confidence="0.3591860691920062" recordCount="28.023331" value="No effect"/>
+            <ScoreDistribution confidence="0.3276174691167171" recordCount="25.560381" value="Positive"/>
+            <Node id="116" recordCount="68.831612" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="5"/>
+              <ScoreDistribution confidence="0.33076280416039067" recordCount="22.766937" value="Negative"/>
+              <ScoreDistribution confidence="0.37369527245707973" recordCount="25.722048" value="No effect"/>
+              <ScoreDistribution confidence="0.2955419233825295" recordCount="20.342627" value="Positive"/>
+</Node>
+            <Node id="117" recordCount="9.1873687" score="Positive">
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="5"/>
+              <ScoreDistribution confidence="0.18158987131973922" recordCount="1.6683331" value="Negative"/>
+              <ScoreDistribution confidence="0.2504832749337686" recordCount="2.3012822" value="No effect"/>
+              <ScoreDistribution confidence="0.5679268537464922" recordCount="5.2177534" value="Positive"/>
+</Node>
+</Node>
+          <Node id="118" recordCount="8.6013325" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.7170040920985208" recordCount="6.1671906" value="Negative"/>
+            <ScoreDistribution confidence="0.28299590790147927" recordCount="2.4341419" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="119" recordCount="5.5230775" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.5230775" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 9">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="122" id="120" recordCount="140" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.2622115285714286" recordCount="36.709614" value="Negative"/>
+      <ScoreDistribution confidence="0.3615461642857143" recordCount="50.616463" value="No effect"/>
+      <ScoreDistribution confidence="0.3762423357142857" recordCount="52.673927" value="Positive"/>
+      <Node id="121" recordCount="47.481024000000005" score="Positive">
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.43770144889882745" recordCount="20.782513" value="No effect"/>
+        <ScoreDistribution confidence="0.5622985511011724" recordCount="26.698511" value="Positive"/>
+</Node>
+      <Node defaultChild="123" id="122" recordCount="92.51897600000001" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.39677929422824565" recordCount="36.709614" value="Negative"/>
+        <ScoreDistribution confidence="0.3224630155872023" recordCount="29.833948" value="No effect"/>
+        <ScoreDistribution confidence="0.28075769018455193" recordCount="25.975414" value="Positive"/>
+        <Node defaultChild="124" id="123" recordCount="80.3217642" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+          <ScoreDistribution confidence="0.35409254618936764" recordCount="28.441338" value="Negative"/>
+          <ScoreDistribution confidence="0.32251547582417267" recordCount="25.905012" value="No effect"/>
+          <ScoreDistribution confidence="0.32339197549647447" recordCount="25.975414" value="Positive"/>
+          <Node defaultChild="125" id="124" recordCount="73.5730635" score="Negative">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="5"/>
+            <ScoreDistribution confidence="0.36321423532948305" recordCount="26.722784" value="Negative"/>
+            <ScoreDistribution confidence="0.3520991347601014" recordCount="25.905012" value="No effect"/>
+            <ScoreDistribution confidence="0.28468662311445003" recordCount="20.945267" value="Positive"/>
+            <Node defaultChild="127" id="125" recordCount="66.9916583" score="Negative">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="Convexity" operator="lessOrEqual" value="0.727273"/>
+              <ScoreDistribution confidence="0.39889718627848925" recordCount="26.722784" value="Negative"/>
+              <ScoreDistribution confidence="0.34405258184211873" recordCount="23.048653" value="No effect"/>
+              <ScoreDistribution confidence="0.2570502274012226" recordCount="17.220221" value="Positive"/>
+              <Node id="126" recordCount="13.5240993" score="No effect">
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="-1"/>
+                <ScoreDistribution confidence="0.14722144194844827" recordCount="1.9910374" value="Negative"/>
+                <ScoreDistribution confidence="0.5365045345385774" recordCount="7.2557406" value="No effect"/>
+                <ScoreDistribution confidence="0.31627402351297434" recordCount="4.2773213" value="Positive"/>
+</Node>
+              <Node id="127" recordCount="53.467559" score="Negative">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="-1"/>
+                <ScoreDistribution confidence="0.4625561267908265" recordCount="24.731747" value="Negative"/>
+                <ScoreDistribution confidence="0.29537372371908727" recordCount="15.792912" value="No effect"/>
+                <ScoreDistribution confidence="0.24207014949008612" recordCount="12.9429" value="Positive"/>
+</Node>
+</Node>
+            <Node id="128" recordCount="6.581405200000001" score="Positive">
+              <SimplePredicate field="Convexity" operator="greaterThan" value="0.727273"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.43400439772345273" recordCount="2.8563588" value="No effect"/>
+              <ScoreDistribution confidence="0.5659956022765472" recordCount="3.7250464" value="Positive"/>
+</Node>
+</Node>
+          <Node id="129" recordCount="6.748700700000001" score="Positive">
+            <SimplePredicate field="Plant_growth" operator="greaterThan" value="5"/>
+            <ScoreDistribution confidence="0.254649476454038" recordCount="1.7185531" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="0.745350523545962" recordCount="5.0301476" value="Positive"/>
+</Node>
+</Node>
+        <Node id="130" recordCount="12.197211800000002" score="Negative">
+          <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+          <ScoreDistribution confidence="0.6778824075187413" recordCount="8.2682753" value="Negative"/>
+          <ScoreDistribution confidence="0.32211759248125865" recordCount="3.9289365" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 10">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="135" id="131" recordCount="139.9999987" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.25422982378927694" recordCount="35.592175" value="Negative"/>
+      <ScoreDistribution confidence="0.3754515820577647" recordCount="52.563221" value="No effect"/>
+      <ScoreDistribution confidence="0.3703185820101011" recordCount="51.844601" value="Positive"/>
+      <Node defaultChild="134" id="132" recordCount="47.3624569" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.4575491521851351" recordCount="21.670652" value="No effect"/>
+        <ScoreDistribution confidence="0.5424508499262419" recordCount="25.691805" value="Positive"/>
+        <Node id="133" recordCount="5.6026959" score="Positive">
+          <SimplePredicate field="Perimeter" operator="lessOrEqual" value="-0.282383"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.6026959" value="Positive"/>
+</Node>
+        <Node id="134" recordCount="41.759761" score="No effect">
+          <SimplePredicate field="Perimeter" operator="greaterThan" value="-0.282383"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5189362075132566" recordCount="21.670652" value="No effect"/>
+          <ScoreDistribution confidence="0.4810637924867434" recordCount="20.089109" value="Positive"/>
+</Node>
+</Node>
+      <Node defaultChild="136" id="135" recordCount="92.6375418" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.38420897519972835" recordCount="35.592175" value="Negative"/>
+        <ScoreDistribution confidence="0.3334778686884371" recordCount="30.89257" value="No effect"/>
+        <ScoreDistribution confidence="0.2823131474760268" recordCount="26.152796" value="Positive"/>
+        <Node defaultChild="137" id="136" recordCount="87.5138159" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="solubility" operator="lessOrEqual" value="1.15097"/>
+          <ScoreDistribution confidence="0.3481558961480504" recordCount="30.468451" value="Negative"/>
+          <ScoreDistribution confidence="0.3530022052209473" recordCount="30.89257" value="No effect"/>
+          <ScoreDistribution confidence="0.29884191120044623" recordCount="26.152796" value="Positive"/>
+          <Node defaultChild="139" id="137" recordCount="80.3714666" score="Negative">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+            <ScoreDistribution confidence="0.34384924363194336" recordCount="27.635668" value="Negative"/>
+            <ScoreDistribution confidence="0.3307517347207398" recordCount="26.583002" value="No effect"/>
+            <ScoreDistribution confidence="0.3253990141819808" recordCount="26.152796" value="Positive"/>
+            <Node id="138" recordCount="10.2432964" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="-0.047619"/>
+              <ScoreDistribution confidence="0.3046568680761791" recordCount="3.1206906" value="Negative"/>
+              <ScoreDistribution confidence="0.6953431319238209" recordCount="7.1226058" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node defaultChild="140" id="139" recordCount="70.1281702" score="Positive">
+              <Extension extender="spss" name="defaultChild" value="0"/>
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="-0.047619"/>
+              <ScoreDistribution confidence="0.3495739006177577" recordCount="24.514978" value="Negative"/>
+              <ScoreDistribution confidence="0.2774975583207217" recordCount="19.460396" value="No effect"/>
+              <ScoreDistribution confidence="0.37292853820959954" recordCount="26.152796" value="Positive"/>
+              <Node defaultChild="141" id="140" recordCount="60.5090291" score="Negative">
+                <Extension extender="spss" name="defaultChild" value="0"/>
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="0"/>
+                <ScoreDistribution confidence="0.3406980959144162" recordCount="20.615311" value="Negative"/>
+                <ScoreDistribution confidence="0.32161144029990724" recordCount="19.460396" value="No effect"/>
+                <ScoreDistribution confidence="0.33769047865948987" recordCount="20.433323" value="Positive"/>
+                <Node id="141" recordCount="46.548885" score="Negative">
+                  <SimplePredicate field="solubility" operator="lessOrEqual" value="0.0650799"/>
+                  <ScoreDistribution confidence="0.39796293724328735" recordCount="18.524731" value="Negative"/>
+                  <ScoreDistribution confidence="0.29904735634376634" recordCount="13.920321" value="No effect"/>
+                  <ScoreDistribution confidence="0.3029897064129463" recordCount="14.103833" value="Positive"/>
+</Node>
+                <Node id="142" recordCount="13.9601441" score="Positive">
+                  <SimplePredicate field="solubility" operator="greaterThan" value="0.0650799"/>
+                  <ScoreDistribution confidence="0.14975350433524537" recordCount="2.0905805" value="Negative"/>
+                  <ScoreDistribution confidence="0.3968493992837796" recordCount="5.5400748" value="No effect"/>
+                  <ScoreDistribution confidence="0.45339709638097503" recordCount="6.3294888" value="Positive"/>
+</Node>
+</Node>
+              <Node id="143" recordCount="9.6191411" score="Positive">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="0"/>
+                <ScoreDistribution confidence="0.4054070170568555" recordCount="3.8996673" value="Negative"/>
+                <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+                <ScoreDistribution confidence="0.5945929829431444" recordCount="5.7194738" value="Positive"/>
+</Node>
+</Node>
+</Node>
+          <Node id="144" recordCount="7.142349299999999" score="No effect">
+            <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+            <ScoreDistribution confidence="0.396617650721731" recordCount="2.8327818" value="Negative"/>
+            <ScoreDistribution confidence="0.6033823492782691" recordCount="4.3095675" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="145" recordCount="5.1237259" score="Negative">
+          <SimplePredicate field="solubility" operator="greaterThan" value="1.15097"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.1237259" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 11">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="150" id="146" recordCount="139.9999995" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.2531630151898679" recordCount="35.442822" value="Negative"/>
+      <ScoreDistribution confidence="0.3721409370433605" recordCount="52.099731" value="No effect"/>
+      <ScoreDistribution confidence="0.3746960513382002" recordCount="52.457447" value="Positive"/>
+      <Node defaultChild="149" id="147" recordCount="47.4498289" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.4431934000082348" recordCount="21.029451" value="No effect"/>
+        <ScoreDistribution confidence="0.5568066020992544" recordCount="26.420378" value="Positive"/>
+        <Node id="148" recordCount="7.2752159" score="No effect">
+          <SimplePredicate field="Maximum_projection_area" operator="lessOrEqual" value="-0.266095"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.7614563301138595" recordCount="5.5397592" value="No effect"/>
+          <ScoreDistribution confidence="0.23854366988614042" recordCount="1.7354567" value="Positive"/>
+</Node>
+        <Node id="149" recordCount="40.174613" score="Positive">
+          <SimplePredicate field="Maximum_projection_area" operator="greaterThan" value="-0.266095"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.38555920874707617" recordCount="15.489692" value="No effect"/>
+          <ScoreDistribution confidence="0.6144407912529238" recordCount="24.684921" value="Positive"/>
+</Node>
+</Node>
+      <Node defaultChild="151" id="150" recordCount="92.55017060000002" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.38295793265669026" recordCount="35.442822" value="Negative"/>
+        <ScoreDistribution confidence="0.3357128117492632" recordCount="31.070278" value="No effect"/>
+        <ScoreDistribution confidence="0.28132925991602653" recordCount="26.037071" value="Positive"/>
+        <Node defaultChild="152" id="151" recordCount="80.46001840000001" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+          <ScoreDistribution confidence="0.34221621555085296" recordCount="27.534723" value="Negative"/>
+          <ScoreDistribution confidence="0.33418120620265723" recordCount="26.888226" value="No effect"/>
+          <ScoreDistribution confidence="0.3236025981321426" recordCount="26.037071" value="Positive"/>
+          <Node defaultChild="153" id="152" recordCount="71.88795970000001" score="Positive">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.298173436684697" recordCount="21.43508" value="Negative"/>
+            <ScoreDistribution confidence="0.33963698652585345" recordCount="24.41581" value="No effect"/>
+            <ScoreDistribution confidence="0.36218959487314534" recordCount="26.037071" value="Positive"/>
+            <Node id="153" recordCount="65.312588" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="5"/>
+              <ScoreDistribution confidence="0.3017154059183813" recordCount="19.705814" value="Negative"/>
+              <ScoreDistribution confidence="0.3738300800452127" recordCount="24.41581" value="No effect"/>
+              <ScoreDistribution confidence="0.32445451403640596" recordCount="21.190964" value="Positive"/>
+</Node>
+            <Node id="154" recordCount="6.5753717" score="Positive">
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="5"/>
+              <ScoreDistribution confidence="0.26299124656329315" recordCount="1.7292652" value="Negative"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+              <ScoreDistribution confidence="0.7370087534367069" recordCount="4.8461065" value="Positive"/>
+</Node>
+</Node>
+          <Node id="155" recordCount="8.5720587" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.7115727870598926" recordCount="6.0996437" value="Negative"/>
+            <ScoreDistribution confidence="0.28842721294010737" recordCount="2.472415" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="156" recordCount="12.0901522" score="Negative">
+          <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+          <ScoreDistribution confidence="0.6540941808821894" recordCount="7.9080982" value="Negative"/>
+          <ScoreDistribution confidence="0.3459058191178106" recordCount="4.182054" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 12">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="159" id="157" recordCount="140.0000019" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.2552043322507983" recordCount="35.728607" value="Negative"/>
+      <ScoreDistribution confidence="0.3714742092442786" recordCount="52.00639" value="No effect"/>
+      <ScoreDistribution confidence="0.3733214449334947" recordCount="52.265003" value="Positive"/>
+      <Node id="158" recordCount="47.168093999999996" score="Positive">
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.45076548990934423" recordCount="21.261749" value="No effect"/>
+        <ScoreDistribution confidence="0.5492345100906558" recordCount="25.906345" value="Positive"/>
+</Node>
+      <Node defaultChild="160" id="159" recordCount="92.8319079" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.38487420767531155" recordCount="35.728607" value="Negative"/>
+        <ScoreDistribution confidence="0.3311861265753432" recordCount="30.74464" value="No effect"/>
+        <ScoreDistribution confidence="0.28393963451008636" recordCount="26.358658" value="Positive"/>
+        <Node defaultChild="161" id="160" recordCount="80.7113573" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+          <ScoreDistribution confidence="0.34702064166625035" recordCount="28.008507" value="Negative"/>
+          <ScoreDistribution confidence="0.32640004927782323" recordCount="26.344191" value="No effect"/>
+          <ScoreDistribution confidence="0.3265792929491473" recordCount="26.358658" value="Positive"/>
+          <Node defaultChild="162" id="161" recordCount="73.5077445" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="1.85714"/>
+            <ScoreDistribution confidence="0.3473891788367959" recordCount="25.535795" value="Negative"/>
+            <ScoreDistribution confidence="0.35838660510118087" recordCount="26.344191" value="No effect"/>
+            <ScoreDistribution confidence="0.29422418205200135" recordCount="21.627756" value="Positive"/>
+            <Node defaultChild="164" id="162" recordCount="66.9372806" score="Negative">
+              <Extension extender="spss" name="defaultChild" value="1"/>
+              <SimplePredicate field="Convexity" operator="lessOrEqual" value="0.727273"/>
+              <ScoreDistribution confidence="0.3814883839186022" recordCount="25.535795" value="Negative"/>
+              <ScoreDistribution confidence="0.3495488581291425" recordCount="23.39785" value="No effect"/>
+              <ScoreDistribution confidence="0.26896271910992453" recordCount="18.003633" value="Positive"/>
+              <Node id="163" recordCount="13.4768546" score="No effect">
+                <SimplePredicate field="Convexity_#2" operator="lessOrEqual" value="-1"/>
+                <ScoreDistribution confidence="0.15063502280420832" recordCount="2.0300863" value="Negative"/>
+                <ScoreDistribution confidence="0.5192457815787372" recordCount="6.9977999" value="No effect"/>
+                <ScoreDistribution confidence="0.33011919561705444" recordCount="4.4489684" value="Positive"/>
+</Node>
+              <Node id="164" recordCount="53.460426" score="Negative">
+                <SimplePredicate field="Convexity_#2" operator="greaterThan" value="-1"/>
+                <ScoreDistribution confidence="0.4396842816029936" recordCount="23.505709" value="Negative"/>
+                <ScoreDistribution confidence="0.30676992734775443" recordCount="16.400051" value="No effect"/>
+                <ScoreDistribution confidence="0.253545791049252" recordCount="13.554666" value="Positive"/>
+</Node>
+</Node>
+            <Node id="165" recordCount="6.5704639" score="Positive">
+              <SimplePredicate field="Convexity" operator="greaterThan" value="0.727273"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.4484220360757176" recordCount="2.9463408" value="No effect"/>
+              <ScoreDistribution confidence="0.5515779639242824" recordCount="3.6241231" value="Positive"/>
+</Node>
+</Node>
+          <Node id="166" recordCount="7.2036128" score="Positive">
+            <SimplePredicate field="Plant_growth" operator="greaterThan" value="1.85714"/>
+            <ScoreDistribution confidence="0.3432599819912586" recordCount="2.472712" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="0.6567400180087414" recordCount="4.7309008" value="Positive"/>
+</Node>
+</Node>
+        <Node id="167" recordCount="12.1205506" score="Negative">
+          <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+          <ScoreDistribution confidence="0.6369430444851243" recordCount="7.7201004" value="Negative"/>
+          <ScoreDistribution confidence="0.3630569555148757" recordCount="4.4004502" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Output 13">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="0.571"/>
+    <MiningSchema>
+      <MiningField name="Application_mode" usageType="active"/>
+      <MiningField name="solubility" usageType="active"/>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="Plant_growth" usageType="active"/>
+      <MiningField name="Convexity_#2" usageType="active"/>
+      <MiningField name="Eccentricity" usageType="active"/>
+      <MiningField name="EState_VSA2" usageType="active"/>
+      <MiningField name="Convexity" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Maximum_projection_area" usageType="active"/>
+      <MiningField name="Output" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="174" id="168" recordCount="140.00000060000002" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.2519599060630289" recordCount="35.274387" value="Negative"/>
+      <ScoreDistribution confidence="0.377370069811271" recordCount="52.83181" value="No effect"/>
+      <ScoreDistribution confidence="0.37067001983998554" recordCount="51.893803" value="Positive"/>
+      <Node defaultChild="171" id="169" recordCount="47.1021748" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="2" type="string">"Foliar application" "Seed priming"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.45942460389323675" recordCount="21.639898" value="No effect"/>
+        <ScoreDistribution confidence="0.5405753791224094" recordCount="25.462276" value="Positive"/>
+        <Node id="170" recordCount="5.262146" score="Positive">
+          <SimplePredicate field="Perimeter" operator="lessOrEqual" value="-0.282383"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.262146" value="Positive"/>
+</Node>
+        <Node defaultChild="173" id="171" recordCount="41.8400288" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="Perimeter" operator="greaterThan" value="-0.282383"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5172056191318873" recordCount="21.639898" value="No effect"/>
+          <ScoreDistribution confidence="0.48279436174766693" recordCount="20.20013" value="Positive"/>
+          <Node id="172" recordCount="7.5904398" score="Positive">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Foliar application"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.3422190108141033" recordCount="2.5975928" value="No effect"/>
+            <ScoreDistribution confidence="0.6577809891858967" recordCount="4.992847" value="Positive"/>
+</Node>
+          <Node id="173" recordCount="34.249589" score="No effect">
+            <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+              <Array n="1" type="string">"Seed priming"</Array>
+</SimpleSetPredicate>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5559863798657554" recordCount="19.042305" value="No effect"/>
+            <ScoreDistribution confidence="0.4440136201342445" recordCount="15.207284" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node defaultChild="175" id="174" recordCount="92.8978258" score="Negative">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimpleSetPredicate booleanOperator="isIn" field="Application_mode">
+          <Array n="1" type="string">"Root entry"</Array>
+</SimpleSetPredicate>
+        <ScoreDistribution confidence="0.37971165305786947" recordCount="35.274387" value="Negative"/>
+        <ScoreDistribution confidence="0.3357657914099427" recordCount="31.191912" value="No effect"/>
+        <ScoreDistribution confidence="0.28452254692057605" recordCount="26.431526" value="Positive"/>
+        <Node defaultChild="176" id="175" recordCount="80.74754440000001" score="Negative">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="EState_VSA2" operator="lessOrEqual" value="1"/>
+          <ScoreDistribution confidence="0.34287877366088665" recordCount="27.686619" value="Negative"/>
+          <ScoreDistribution confidence="0.32978585538261884" recordCount="26.629398" value="No effect"/>
+          <ScoreDistribution confidence="0.3273353536185058" recordCount="26.431526" value="Positive"/>
+          <Node defaultChild="177" id="176" recordCount="72.35915220000001" score="Positive">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="Area" operator="lessOrEqual" value="2.26022"/>
+            <ScoreDistribution confidence="0.3017455337184008" recordCount="21.834051" value="Negative"/>
+            <ScoreDistribution confidence="0.3329720466238409" recordCount="24.093575" value="No effect"/>
+            <ScoreDistribution confidence="0.36528241689376784" recordCount="26.431526" value="Positive"/>
+            <Node id="177" recordCount="65.182612" score="No effect">
+              <SimplePredicate field="Plant_growth" operator="lessOrEqual" value="1.85714"/>
+              <ScoreDistribution confidence="0.2962035028605481" recordCount="19.307318" value="Negative"/>
+              <ScoreDistribution confidence="0.36963193497063296" recordCount="24.093575" value="No effect"/>
+              <ScoreDistribution confidence="0.33416456216881885" recordCount="21.781719" value="Positive"/>
+</Node>
+            <Node id="178" recordCount="7.1765402" score="Positive">
+              <SimplePredicate field="Plant_growth" operator="greaterThan" value="1.85714"/>
+              <ScoreDistribution confidence="0.35208235857161363" recordCount="2.5267332" value="Negative"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+              <ScoreDistribution confidence="0.6479176414283864" recordCount="4.649807" value="Positive"/>
+</Node>
+</Node>
+          <Node id="179" recordCount="8.3883922" score="Negative">
+            <SimplePredicate field="Area" operator="greaterThan" value="2.26022"/>
+            <ScoreDistribution confidence="0.6976983265040946" recordCount="5.8525672" value="Negative"/>
+            <ScoreDistribution confidence="0.3023016734959054" recordCount="2.535825" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="180" recordCount="12.1502814" score="Negative">
+          <SimplePredicate field="EState_VSA2" operator="greaterThan" value="1"/>
+          <ScoreDistribution confidence="0.62449315782925" recordCount="7.5877676" value="Negative"/>
+          <ScoreDistribution confidence="0.37550684217075" recordCount="4.5625138" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</TreeModel>
+</PMML>

@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_2 pmml-4-2.xsd">
+
+  <Header copyright="(C) Copyright IBM Corp. 1994, 2016">
+    <Application name="IBM SPSS Modeler Common" version="18.0.0.0"/>
+    <Timestamp>Wed Sep 07 09:16:02 2022</Timestamp>
+</Header>  <DataDictionary>
+    <DataField dataType="double" displayName="Change_percent" name="Change_percent" optype="continuous"/>
+    <DataField dataType="double" displayName="Circularity" name="Circularity" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.023737160028404"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-3.5" rightMargin="3.833333333"/>
+</DataField>    <DataField dataType="double" displayName="Perimeter" name="Perimeter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0348409267355245"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.453333939" rightMargin="1.833761393"/>
+</DataField>    <DataField dataType="double" displayName="Convexity" name="Convexity" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0158510284269103"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-4" rightMargin="1.454545455"/>
+</DataField>    <DataField dataType="double" displayName="Extend" name="Extend" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.000139023796692031"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-2.5" rightMargin="2.833333333"/>
+</DataField>    <DataField dataType="double" displayName="Diameter" name="Diameter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0320483197187124"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.471446044" rightMargin="2.220905071"/>
+</DataField>    <DataField dataType="double" displayName="Area" name="Area" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0744048422622243"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.122747063" rightMargin="3.688791822"/>
+</DataField>    <DataField dataType="double" displayName="Circularity_#2" name="Circularity_#2" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0334346241026743"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-4.083333333" rightMargin="4.083333333"/>
+</DataField>    <DataField dataType="double" displayName="Convexity_#2" name="Convexity_#2" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0200164473346089"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-4.5" rightMargin="2.5"/>
+</DataField>    <DataField dataType="double" displayName="Eccentricity" name="Eccentricity" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00551426934751805"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-4.8" rightMargin="2.057142857"/>
+</DataField>    <DataField dataType="double" displayName="Main_Elongation" name="Main_Elongation" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00518916002667047"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-3.6875" rightMargin="2.4375"/>
+</DataField>    <DataField dataType="double" displayName="Zeta_Prediction" name="Zeta_Prediction" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00519281831072755"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-54.4627451" rightMargin="1.396078431"/>
+</DataField>    <DataField dataType="double" displayName="Minimum_Ferets_Diameter" name="Minimum_Ferets_Diameter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0345195388696946"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.377225131" rightMargin="1.57486911"/>
+</DataField>    <DataField dataType="double" displayName="Maximum_Ferets_Diameter" name="Maximum_Ferets_Diameter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0217495088253511"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.459565509" rightMargin="2.571250837"/>
+</DataField>    <DataField dataType="double" displayName="Major_Axis" name="Major_Axis" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.028092277058843"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.393599075" rightMargin="2.088109124"/>
+</DataField>    <DataField dataType="double" displayName="Minor_Axis" name="Minor_Axis" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0351403503267314"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.401994344" rightMargin="1.668551868"/>
+</DataField>    <DataField dataType="double" displayName="Boundary_Size" name="Boundary_Size" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0312253950063036"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.442973244" rightMargin="1.801448878"/>
+</DataField>    <DataField dataType="double" displayName="Boxivity" name="Boxivity" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0150714448214626"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-3.666666667" rightMargin="4.5"/>
+</DataField>    <DataField dataType="double" displayName="Roundness" name="Roundness" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00288615369816872"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-2.514285714" rightMargin="3.657142857"/>
+</DataField>    <DataField dataType="double" displayName="Solidity" name="Solidity" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00907470462497435"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-6.25" rightMargin="3.75"/>
+</DataField>    <DataField dataType="double" displayName="logD" name="logD" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0242439085773653"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.701754386" rightMargin="1.877192982"/>
+</DataField>    <DataField dataType="double" displayName="solubility" name="solubility" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0585741167574955"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.53545273" rightMargin="5.18891478"/>
+</DataField>    <DataField dataType="double" displayName="Minimum_projection_area" name="Minimum_projection_area" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00266413377665917"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.429359775" rightMargin="236.9253528"/>
+</DataField>    <DataField dataType="double" displayName="Maximum_projection_area" name="Maximum_projection_area" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00246747437707658"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.365907047" rightMargin="140.1852966"/>
+</DataField>    <DataField dataType="double" displayName="Minimum_projection_radius" name="Minimum_projection_radius" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00597567996685974"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-115.0204552" rightMargin="14.37461612"/>
+</DataField>    <DataField dataType="double" displayName="Polarizability" name="Polarizability" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00519134484817744"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.393760235" rightMargin="208.0259473"/>
+</DataField>    <DataField dataType="double" displayName="MaxEStateIndex" name="MaxEStateIndex" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="2.23015115694078e-007"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.185334293" rightMargin="14.20304562"/>
+</DataField>    <DataField dataType="double" displayName="MinEStateIndex" name="MinEStateIndex" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.143303273151427"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-28.34907733" rightMargin="31.19515158"/>
+</DataField>    <DataField dataType="double" displayName="MinAbsEStateIndex" name="MinAbsEStateIndex" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.02621798486318"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.049236739" rightMargin="3.103597131"/>
+</DataField>    <DataField dataType="double" displayName="FpDensityMorgan1" name="FpDensityMorgan1" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00612095726907118"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.212885703" rightMargin="113.5347111"/>
+</DataField>    <DataField dataType="double" displayName="BalabanJ" name="BalabanJ" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.000501764674217734"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.273370735" rightMargin="12.91702703"/>
+</DataField>    <DataField dataType="double" displayName="Chi0v" name="Chi0v" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00320373918665435"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.311447765" rightMargin="146.5402317"/>
+</DataField>    <DataField dataType="double" displayName="HallKierAlpha" name="HallKierAlpha" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0065974958461756"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-4.539837544" rightMargin="478.3416925"/>
+</DataField>    <DataField dataType="double" displayName="Kappa1" name="Kappa1" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00178103658250553"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.437503513" rightMargin="134.1390822"/>
+</DataField>    <DataField dataType="double" displayName="Kappa3" name="Kappa3" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.000270752908935699"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.36033897" rightMargin="200.4894907"/>
+</DataField>    <DataField dataType="double" displayName="SlogP_VSA3" name="SlogP_VSA3" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00530240946770344"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.314657559" rightMargin="174.7778219"/>
+</DataField>    <DataField dataType="double" displayName="EState_VSA1" name="EState_VSA1" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0611435545277093"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="0" rightMargin="48.37852846"/>
+</DataField>    <DataField dataType="double" displayName="EState_VSA2" name="EState_VSA2" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00556531470325517"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="0" rightMargin="2212.351656"/>
+</DataField>    <DataField dataType="double" displayName="EState_VSA8" name="EState_VSA8" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0823976407901724"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="0" rightMargin="46.59088193"/>
+</DataField>    <DataField dataType="double" displayName="EState_VSA9" name="EState_VSA9" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0224347281454973"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.294707643" rightMargin="15.17749109"/>
+</DataField>    <DataField dataType="double" displayName="MolMR" name="MolMR" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0639549193935239"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.337763846" rightMargin="57.0255998"/>
+</DataField>    <DataField dataType="double" displayName="Formation_Energy" name="Formation_Energy" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0209763795532361"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-23.76017071" rightMargin="0.603640585"/>
+</DataField>    <DataField dataType="double" displayName="Band_Gap" name="Band_Gap" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0634532771723643"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="0" rightMargin="85.7202277"/>
+</DataField>    <DataField dataType="double" displayName="Volume" name="Volume" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0025359760933534"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.41519484" rightMargin="193.2173817"/>
+</DataField>    <DataField dataType="double" displayName="Count" name="Count" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0577812664603777"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.364459437" rightMargin="112.3558344"/>
+</DataField>    <DataField dataType="double" displayName="Density" name="Density" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0664319423484571"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-3.648351648" rightMargin="4.923076923"/>
+</DataField>    <DataField dataType="double" displayName="Amount_of_molecular_in_NP" name="Amount_of_molecular_in_NP" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00533972020403728"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.306771226" rightMargin="170.4538059"/>
+</DataField>    <DataField dataType="double" displayName="Crystal_ionic_radii" name="Crystal_ionic_radii" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0136320950953208"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.307692308" rightMargin="4.153846154"/>
+</DataField>    <DataField dataType="double" displayName="NP_volume" name="NP_volume" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00213075264867762"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.40269681" rightMargin="149.0687614"/>
+</DataField>    <DataField dataType="double" displayName="Primary_size" name="Primary_size" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00214243847400717"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.338129496" rightMargin="9.165467626"/>
+</DataField>    <DataField dataType="double" displayName="Exposure_time" name="Exposure_time" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0125818360310385"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.227272727" rightMargin="14.18181818"/>
+</DataField>    <DataField dataType="double" displayName="Plant_growth" name="Plant_growth" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0252872870853864"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.714285714" rightMargin="7.666666667"/>
+</DataField>    <DataField dataType="double" displayName="NP_concentration" name="NP_concentration" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0551753372130608"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.262631579" rightMargin="10.26315789"/>
+</DataField>  </DataDictionary>
+
+  <TransformationDictionary>
+    <DefineFunction dataType="double" name="computeBounds" optype="continuous">
+      <ParameterField name="RobustMean"/>
+      <ParameterField name="RobustSD"/>
+      <ParameterField name="CutOff"/>
+      <ParameterField name="AnalysisWeight"/>
+      <ParameterField name="Coeff"/>
+      <Apply function="+">
+        <FieldRef field="RobustMean"/>
+        <Apply function="*">
+          <FieldRef field="Coeff"/>
+          <Apply function="*">
+            <FieldRef field="CutOff"/>
+            <Apply function="/">
+              <FieldRef field="RobustSD"/>
+              <Apply function="sqrt">
+                <FieldRef field="AnalysisWeight"/>
+</Apply>
+</Apply>
+</Apply>
+</Apply>
+</Apply>
+</DefineFunction>    <DefineFunction dataType="double" name="treatOutlier" optype="continuous">
+      <ParameterField name="Extreme"/>
+      <ParameterField name="OUTLIER-TREATMENT-METHOD"/>
+      <Apply function="if">
+        <Apply function="equal">
+          <FieldRef field="OUTLIER-TREATMENT-METHOD"/>
+          <Constant>asExtremeValues</Constant>
+</Apply>
+        <FieldRef field="Extreme"/>
+</Apply>
+</DefineFunction>    <DefineFunction dataType="double" name="outlierHandle" optype="continuous">
+      <ParameterField name="Var"/>
+      <ParameterField name="OUTLIER-TREATMENT-METHOD"/>
+      <ParameterField name="RobustMean"/>
+      <ParameterField name="RobustSD"/>
+      <ParameterField name="CutOff"/>
+      <ParameterField name="AnalysisWeight"/>
+      <Apply function="if">
+        <Apply function="lessThan">
+          <FieldRef field="Var"/>
+          <Apply function="computeBounds">
+            <FieldRef field="RobustMean"/>
+            <FieldRef field="RobustSD"/>
+            <FieldRef field="CutOff"/>
+            <FieldRef field="AnalysisWeight"/>
+            <Constant>-1</Constant>
+</Apply>
+</Apply>
+        <Apply function="treatOutlier">
+          <Apply function="computeBounds">
+            <FieldRef field="RobustMean"/>
+            <FieldRef field="RobustSD"/>
+            <FieldRef field="CutOff"/>
+            <FieldRef field="AnalysisWeight"/>
+            <Constant>-1</Constant>
+</Apply>
+          <FieldRef field="OUTLIER-TREATMENT-METHOD"/>
+</Apply>
+        <Apply function="if">
+          <Apply function="greaterThan">
+            <FieldRef field="Var"/>
+            <Apply function="computeBounds">
+              <FieldRef field="RobustMean"/>
+              <FieldRef field="RobustSD"/>
+              <FieldRef field="CutOff"/>
+              <FieldRef field="AnalysisWeight"/>
+              <Constant>1</Constant>
+</Apply>
+</Apply>
+          <Apply function="treatOutlier">
+            <Apply function="computeBounds">
+              <FieldRef field="RobustMean"/>
+              <FieldRef field="RobustSD"/>
+              <FieldRef field="CutOff"/>
+              <FieldRef field="AnalysisWeight"/>
+              <Constant>1</Constant>
+</Apply>
+            <FieldRef field="OUTLIER-TREATMENT-METHOD"/>
+</Apply>
+          <FieldRef field="Var"/>
+</Apply>
+</Apply>
+</DefineFunction>    <DerivedField dataType="double" displayName="Circularity" name="Circularity_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Circularity"/>
+        <PredictivePower value="0.0251945966399944"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-3.5" rightMargin="3.49200985838402"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Circularity"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.205627705558441</Constant>
+        <Constant dataType="double">1.23254585464749</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Perimeter" name="Perimeter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Perimeter"/>
+        <PredictivePower value="0.0348409267355245"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.453333939" rightMargin="1.833761393"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Perimeter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.305668859737179</Constant>
+        <Constant dataType="double">0.688817188619313</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Convexity" name="Convexity_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Convexity"/>
+        <PredictivePower value="0.0146787231933488"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-2.81569329723077" rightMargin="1.454545455"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Convexity"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.103896103824675</Constant>
+        <Constant dataType="double">0.90393239780203</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Extend" name="Extend_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Extend"/>
+        <PredictivePower value="0.000139023796692031"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-2.5" rightMargin="2.833333333"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Extend"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.159090909</Constant>
+        <Constant dataType="double">0.994783216995511</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Diameter" name="Diameter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Diameter"/>
+        <PredictivePower value="0.0320483197187124"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.471446044" rightMargin="2.220905071"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Diameter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.381704866448718</Constant>
+        <Constant dataType="double">0.79311725313672</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Area" name="Area_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Area"/>
+        <PredictivePower value="0.0744048422622243"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.122747063" rightMargin="3.688791822"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Area"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.600070667186335</Constant>
+        <Constant dataType="double">1.08880164538091</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Circularity_#2" name="Circularity_#2_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Circularity_#2"/>
+        <PredictivePower value="0.0334346241026743"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-4.083333333" rightMargin="4.083333333"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Circularity_#2"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.241341991396104</Constant>
+        <Constant dataType="double">1.44906152585959</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Convexity_#2" name="Convexity_#2_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Convexity_#2"/>
+        <PredictivePower value="0.0137861311840282"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-3.49923829998132" rightMargin="2.5"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Convexity_#2"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.172077922077922</Constant>
+        <Constant dataType="double">1.10905345930113</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Eccentricity" name="Eccentricity_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Eccentricity"/>
+        <PredictivePower value="0.00621917852756403"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-4.23024971579189" rightMargin="2.057142857"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Eccentricity"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.0788426762594937</Constant>
+        <Constant dataType="double">1.3838023465108</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Main_Elongation" name="Main_Elongation_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Main_Elongation"/>
+        <PredictivePower value="0.00518916002667047"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-3.6875" rightMargin="2.4375"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Main_Elongation"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.320411392405063</Constant>
+        <Constant dataType="double">1.22064932798392</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Zeta_Prediction" name="Zeta_Prediction_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Zeta_Prediction"/>
+        <PredictivePower value="0.00361042244193366"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-22.6986330286396" rightMargin="1.396078431"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Zeta_Prediction"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-2.46746123326797</Constant>
+        <Constant dataType="double">6.74372393179055</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minimum_Ferets_Diameter" name="Minimum_Ferets_Diameter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minimum_Ferets_Diameter"/>
+        <PredictivePower value="0.0345195388696946"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.377225131" rightMargin="1.57486911"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minimum_Ferets_Diameter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.308237018018868</Constant>
+        <Constant dataType="double">0.658384128966527</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Maximum_Ferets_Diameter" name="Maximum_Ferets_Diameter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Maximum_Ferets_Diameter"/>
+        <PredictivePower value="0.0217495088253511"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.459565509" rightMargin="2.571250837"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Maximum_Ferets_Diameter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.386429804943396</Constant>
+        <Constant dataType="double">0.835023179314148</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Major_Axis" name="Major_Axis_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Major_Axis"/>
+        <PredictivePower value="0.028092277058843"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.393599075" rightMargin="2.088109124"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Major_Axis"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.373264240893082</Constant>
+        <Constant dataType="double">0.751262034174919</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minor_Axis" name="Minor_Axis_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minor_Axis"/>
+        <PredictivePower value="0.0351403503267314"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.401994344" rightMargin="1.668551868"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minor_Axis"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.303397574377358</Constant>
+        <Constant dataType="double">0.681663411538377</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Boundary_Size" name="Boundary_Size_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Boundary_Size"/>
+        <PredictivePower value="0.0312253950063036"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.442973244" rightMargin="1.801448878"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Boundary_Size"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.301866824134615</Constant>
+        <Constant dataType="double">0.684410968750034</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Boxivity" name="Boxivity_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Boxivity"/>
+        <PredictivePower value="0.0261977209993898"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-3.41646435968753" rightMargin="3.16381043198053"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Boxivity"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.126326963853503</Constant>
+        <Constant dataType="double">1.09671246527801</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Roundness" name="Roundness_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Roundness"/>
+        <PredictivePower value="0.00288615369816872"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-2.514285714" rightMargin="3.657142857"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Roundness"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.0205856255714287</Constant>
+        <Constant dataType="double">1.46071764300647</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Solidity" name="Solidity_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Solidity"/>
+        <PredictivePower value="0.00858271553261697"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-5.55627413967112" rightMargin="3.75"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Solidity"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.380573248407643</Constant>
+        <Constant dataType="double">1.72523363042116</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="logD" name="logD_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="logD"/>
+        <PredictivePower value="0.0242439085773653"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.701754386" rightMargin="1.877192982"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="logD"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.343358395801242</Constant>
+        <Constant dataType="double">0.863355138561026</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="solubility" name="solubility_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="solubility"/>
+        <PredictivePower value="0.0585741167574955"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.53545273" rightMargin="5.18891478"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="solubility"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.333956380975155</Constant>
+        <Constant dataType="double">1.91727088721291</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minimum_projection_area" name="Minimum_projection_area_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minimum_projection_area"/>
+        <PredictivePower value="0.00960302583036287"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.429359775" rightMargin="9.46643488056206"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minimum_projection_area"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">1.04195959713208</Constant>
+        <Constant dataType="double">2.80815842780999</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Maximum_projection_area" name="Maximum_projection_area_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Maximum_projection_area"/>
+        <PredictivePower value="0.00362071778990428"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.365907047" rightMargin="8.71032820105668"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Maximum_projection_area"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">1.01986299250943</Constant>
+        <Constant dataType="double">2.56348840284908</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minimum_projection_radius" name="Minimum_projection_radius_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minimum_projection_radius"/>
+        <PredictivePower value="0.000576106928552387"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-4.72108020568116" rightMargin="6.16619497072575"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minimum_projection_radius"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.722557382522293</Constant>
+        <Constant dataType="double">1.81454586273448</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Polarizability" name="Polarizability_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Polarizability"/>
+        <PredictivePower value="0.00093489020419074"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.393760235" rightMargin="6.96295793258623"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Polarizability"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.754617373339623</Constant>
+        <Constant dataType="double">2.0694468530822</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MaxEStateIndex" name="MaxEStateIndex_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MaxEStateIndex"/>
+        <PredictivePower value="0.00551396292720459"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.185334293" rightMargin="3.77212488286786"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MaxEStateIndex"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.519845727509804</Constant>
+        <Constant dataType="double">1.08409305178602</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MinEStateIndex" name="MinEStateIndex_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MinEStateIndex"/>
+        <PredictivePower value="0.142740706859029"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-27.6903654429159" rightMargin="31.19515158"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MinEStateIndex"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">4.76834099205195</Constant>
+        <Constant dataType="double">10.819568811656</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MinAbsEStateIndex" name="MinAbsEStateIndex_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MinAbsEStateIndex"/>
+        <PredictivePower value="0.02621798486318"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.049236739" rightMargin="3.103597131"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MinAbsEStateIndex"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.572376856161491</Constant>
+        <Constant dataType="double">1.10412402677877</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="FpDensityMorgan1" name="FpDensityMorgan1_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="FpDensityMorgan1"/>
+        <PredictivePower value="0.00301490681298553"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.212885703" rightMargin="4.34121594768892"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="FpDensityMorgan1"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.623460785414013</Constant>
+        <Constant dataType="double">1.2392517207583</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="BalabanJ" name="BalabanJ_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="BalabanJ"/>
+        <PredictivePower value="0.017224061967815"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.273370735" rightMargin="3.50256534220146"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="BalabanJ"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.404697318980519</Constant>
+        <Constant dataType="double">1.03262267440698</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Chi0v" name="Chi0v_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Chi0v"/>
+        <PredictivePower value="0.00245881850095846"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.311447765" rightMargin="6.4358118424003"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Chi0v"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.737549607847134</Constant>
+        <Constant dataType="double">1.89942074485105</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="HallKierAlpha" name="HallKierAlpha_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="HallKierAlpha"/>
+        <PredictivePower value="0.0616115651909131"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-4.07363459357972" rightMargin="4.45755899117712"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="HallKierAlpha"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.191962198798701</Constant>
+        <Constant dataType="double">1.42186559745947</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Kappa1" name="Kappa1_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Kappa1"/>
+        <PredictivePower value="0.000354915643071194"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.437503513" rightMargin="6.78183328067299"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Kappa1"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.699461910821656</Constant>
+        <Constant dataType="double">2.02745712328378</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Kappa3" name="Kappa3_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Kappa3"/>
+        <PredictivePower value="0.00702047391495953"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.36033897" rightMargin="4.44518744992946"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Kappa3"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.526280574082802</Constant>
+        <Constant dataType="double">1.30630229194888</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="SlogP_VSA3" name="SlogP_VSA3_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="SlogP_VSA3"/>
+        <PredictivePower value="0.00647512476499875"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.314657559" rightMargin="7.10008069503013"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="SlogP_VSA3"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.717087370779874</Constant>
+        <Constant dataType="double">2.12766444141675</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="EState_VSA1" name="EState_VSA1_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="EState_VSA1"/>
+        <PredictivePower value="0.0326586447475801"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="0" rightMargin="3.40413753347707"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="EState_VSA1"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.505233392435065</Constant>
+        <Constant dataType="double">0.966301380347335</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="EState_VSA2" name="EState_VSA2_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="EState_VSA2"/>
+        <PredictivePower value="0.00270629369581279"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="0" rightMargin="10.4887479863905"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="EState_VSA2"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">1.40531934779487</Constant>
+        <Constant dataType="double">3.02780954619856</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="EState_VSA8" name="EState_VSA8_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="EState_VSA8"/>
+        <PredictivePower value="0.0823976407901724"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="0" rightMargin="46.59088193"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="EState_VSA8"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">7.35910489130435</Constant>
+        <Constant dataType="double">15.6310691696231</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="EState_VSA9" name="EState_VSA9_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="EState_VSA9"/>
+        <PredictivePower value="0.00327850457707355"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.294707643" rightMargin="4.05553763622381"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="EState_VSA9"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.462897552169935</Constant>
+        <Constant dataType="double">1.19754669468462</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MolMR" name="MolMR_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MolMR"/>
+        <PredictivePower value="0.000524121994994748"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.337763846" rightMargin="5.37275540776111"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MolMR"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.529666950779221</Constant>
+        <Constant dataType="double">1.61436281899396</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Formation_Energy" name="Formation_Energy_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Formation_Energy"/>
+        <PredictivePower value="3.55746583572596e-006"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-4.61496275488046" rightMargin="0.603640585"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Formation_Energy"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.359097653558442</Constant>
+        <Constant dataType="double">1.41862170044067</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Band_Gap" name="Band_Gap_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Band_Gap"/>
+        <PredictivePower value="0.0317926152533057"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="0" rightMargin="2.46255675421172"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Band_Gap"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.401128656162338</Constant>
+        <Constant dataType="double">0.687142699349793</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Volume" name="Volume_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Volume"/>
+        <PredictivePower value="0.00395681747182871"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.41519484" rightMargin="9.47857428487514"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Volume"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.976874308396226</Constant>
+        <Constant dataType="double">2.83389999215964</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Count" name="Count_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Count"/>
+        <PredictivePower value="0.0114588531777432"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.364459437" rightMargin="5.29174562315693"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Count"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.410057459303226</Constant>
+        <Constant dataType="double">1.62722938795123</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Density" name="Density_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Density"/>
+        <PredictivePower value="0.0664319423484571"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-3.648351648" rightMargin="4.923076923"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Density"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.394990102937888</Constant>
+        <Constant dataType="double">2.13415931607822</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Amount_of_molecular_in_NP" name="Amount_of_molecular_in_NP_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Amount_of_molecular_in_NP"/>
+        <PredictivePower value="0.000219390724566046"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.306771226" rightMargin="6.32235467738275"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Amount_of_molecular_in_NP"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.741848164584906</Constant>
+        <Constant dataType="double">1.86016883759928</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Crystal_ionic_radii" name="Crystal_ionic_radii_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Crystal_ionic_radii"/>
+        <PredictivePower value="0.0150072071514218"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.307692308" rightMargin="3.22880872994924"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Crystal_ionic_radii"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.540472599202614</Constant>
+        <Constant dataType="double">0.896112043582208</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="NP_volume" name="NP_volume_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="NP_volume"/>
+        <PredictivePower value="0.00126181763504072"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.40269681" rightMargin="7.32087698452583"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="NP_volume"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.800388362305733</Constant>
+        <Constant dataType="double">2.1734962074067</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Primary_size" name="Primary_size_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Primary_size"/>
+        <PredictivePower value="0.00101909295473892"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.338129496" rightMargin="2.72190603612403"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Primary_size"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.162381062851613</Constant>
+        <Constant dataType="double">0.853174991090804</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Exposure_time" name="Exposure_time_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Exposure_time"/>
+        <PredictivePower value="0.0125777265205919"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.227272727" rightMargin="12.9149752008159"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Exposure_time"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">1.15386787124845</Constant>
+        <Constant dataType="double">3.9203691098558</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Plant_growth" name="Plant_growth_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Plant_growth"/>
+        <PredictivePower value="0.0249185389891741"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.714285714" rightMargin="6.90013875865063"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Plant_growth"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.746228926397515</Constant>
+        <Constant dataType="double">2.0513032774177</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="NP_concentration" name="NP_concentration_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="NP_concentration"/>
+        <PredictivePower value="0.0673985559283483"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.262631579" rightMargin="4.44647228812473"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="NP_concentration"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.577245945119497</Constant>
+        <Constant dataType="double">1.28974211433508</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>  </TransformationDictionary>
+
+  <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+    <Extension extender="spss.com" name="modelID" value="24"/>
+    <MiningSchema>
+      <Extension extender="spss.com" name="DerivedFields">
+        <MiningField importance="0.0183310884260347" name="Extend_transformed"/>
+        <MiningField importance="0.0314910716446521" name="Zeta_Prediction_transformed"/>
+        <MiningField importance="0.0963674441033567" name="Minimum_Ferets_Diameter_transformed"/>
+        <MiningField importance="0.0567948593649742" name="Maximum_Ferets_Diameter_transformed"/>
+        <MiningField importance="0.0915574606549011" name="Minor_Axis_transformed"/>
+        <MiningField importance="0.137036348955597" name="Boxivity_transformed"/>
+        <MiningField importance="0.0917878456989488" name="Solidity_transformed"/>
+        <MiningField importance="0.0165257436886814" name="Minimum_projection_area_transformed"/>
+        <MiningField importance="0.0289567885980307" name="Maximum_projection_area_transformed"/>
+        <MiningField importance="0.121203323894938" name="MinEStateIndex_transformed"/>
+        <MiningField importance="0.0620672583535241" name="EState_VSA1_transformed"/>
+        <MiningField importance="0.0105927141862074" name="EState_VSA8_transformed"/>
+        <MiningField importance="0.187867975039553" name="Volume_transformed"/>
+        <MiningField importance="0.00434204237922946" name="Plant_growth_transformed"/>
+        <MiningField importance="0.0450780350113713" name="NP_concentration_transformed"/>
+      </Extension>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <MiningField name="Change_percent" usageType="predicted"/>
+      <MiningField name="Extend"/>
+      <MiningField name="Zeta_Prediction"/>
+      <MiningField name="Minimum_Ferets_Diameter"/>
+      <MiningField name="Maximum_Ferets_Diameter"/>
+      <MiningField name="Minor_Axis"/>
+      <MiningField name="Boxivity"/>
+      <MiningField name="Solidity"/>
+      <MiningField name="Minimum_projection_area"/>
+      <MiningField name="Maximum_projection_area"/>
+      <MiningField name="MinEStateIndex"/>
+      <MiningField name="EState_VSA1"/>
+      <MiningField name="EState_VSA8"/>
+      <MiningField name="Volume"/>
+      <MiningField name="Plant_growth"/>
+      <MiningField name="NP_concentration"/>
+    </MiningSchema>
+    <ModelStats>
+      <UnivariateStats field="Change_percent">
+        <Anova>
+          <AnovaRow degreesOfFreedom="15" fValue="12.5901272538392" meanOfSquares="0.578826818061836" pValue="0.0000000000000000" sumOfSquares="8.68240227092762" type="Model"/>
+          <AnovaRow degreesOfFreedom="145" meanOfSquares="0.0459746598578134" sumOfSquares="6.66632567938294" type="Error"/>
+          <AnovaRow degreesOfFreedom="160" sumOfSquares="15.3487279503106" type="Total"/>
+</Anova>
+</UnivariateStats>
+      <UnivariateStats field="Extend_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="2.833333333" mean="0.0434782607826088" minimum="-2.5"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Zeta_Prediction_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="1.396078431" mean="-3.4727368504293" minimum="-22.6986330286396"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Minimum_Ferets_Diameter_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="1.57486911" mean="0.299721960267081" minimum="-0.377225131"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Maximum_Ferets_Diameter_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="2.571250837" mean="0.375920546385093" minimum="-0.459565509"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Minor_Axis_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="1.668551868" mean="0.294634941850932" minimum="-0.401994344"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Boxivity_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="3.16381043198053" mean="-0.0337060586701283" minimum="-3.41646435968753"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Solidity_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="3.75" mean="-0.247788316631664" minimum="-5.55627413967112"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Minimum_projection_area_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="9.46643488056205" mean="1.01720580564982" minimum="-0.429359775"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Maximum_projection_area_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="8.71032820105667" mean="1.00959002792277" minimum="-0.365907047"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="MinEStateIndex_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="31.19515158" mean="3.62095868052382" minimum="-27.6903654429161"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="EState_VSA1_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="3.40413753347707" mean="0.623696488252664" minimum="0"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="EState_VSA8_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="46.59088193" mean="7.35910489130435" minimum="0"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Volume_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="9.47857428487515" mean="0.942155203750009" minimum="-0.41519484"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Plant_growth_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="6.90013875865061" mean="0.71636472625159" minimum="-0.714285714"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="NP_concentration_transformed">
+        <Counts totalFreq="161"/>
+        <NumericInfo maximum="4.44647228812474" mean="0.601244446379643" minimum="-0.262631579"/>
+        <ContStats/>
+</UnivariateStats>
+</ModelStats>
+    <ModelExplanation>
+      <PredictiveModelQuality AIC="-480.678020249379" AICc="-476.900242471601" adj-r-squared="0.5207455887508" fStatistic="12.5901272538392" numOfPredictors="15" numOfRecords="161" numOfRecordsWeighted="161" r-squared="0.565675689805412" sumSquaredError="6.66632567938294" sumSquaredRegression="15.3487279503106" targetField="Change_percent">
+        <LiftData>
+          <ModelLiftGraph>
+            <LiftGraph>
+              <XCoordinates>
+                <Array n="21" type="int">2 10 18 26 34 42 50 58 66 74 82 90 98 106 114 122 130 138 146 154 161</Array>
+</XCoordinates>
+              <YCoordinates>
+                <Array n="21" type="real">2.4 3.73 2.45 1.18 2.22 0.88 1.04 1.34 1.16 -0.2 0.89 1.17 0.42 -0.38 0.05 -0.24 -0.92 -1.11 -1.69 -2.38 -3.03</Array>
+</YCoordinates>
+              <BoundaryValues>
+                <Array n="21" type="real">1.23980548112975 0.360356028354606 0.250225906117558 0.192146658118584 0.176254873179408 0.13896878005599 0.128868178931379 0.123169442425681 0.115926119861074 0.0924229898396732 0.074122385345346 0.0238630412905512 0.000131817132054328 -0.00673016635567642 -0.0389807810655241 -0.0752179746914315 -0.102667561119737 -0.1704358148711 -0.230177137390704 -0.266530350154318 -0.466303149570729</Array>
+</BoundaryValues>
+              <BoundaryValueMeans>
+                <Array n="21" type="real">1.24483228853004 0.464401202846894 0.308552414882159 0.204371752686608 0.184055531154424 0.149657463421551 0.13463994240144 0.124401871274847 0.119815491365093 0.104735066409494 0.0784253527036595 0.0445816799291137 0.0139808125807537 -0.0046594953881455 -0.027512137851211 -0.0595691163724314 -0.0857955860558064 -0.139374562494788 -0.213945341857885 -0.257151467926947 -0.379793080961519</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>
+    <ParameterList>
+      <Parameter label="Intercept" name="P0000001"/>
+      <Parameter label="Extend_transformed" name="P0000002"/>
+      <Parameter label="Zeta_Prediction_transformed" name="P0000003"/>
+      <Parameter label="Minimum_Ferets_Diameter_transformed" name="P0000004"/>
+      <Parameter label="Maximum_Ferets_Diameter_transformed" name="P0000005"/>
+      <Parameter label="Minor_Axis_transformed" name="P0000006"/>
+      <Parameter label="Boxivity_transformed" name="P0000007"/>
+      <Parameter label="Solidity_transformed" name="P0000008"/>
+      <Parameter label="Minimum_projection_area_transformed" name="P0000009"/>
+      <Parameter label="Maximum_projection_area_transformed" name="P0000010"/>
+      <Parameter label="MinEStateIndex_transformed" name="P0000011"/>
+      <Parameter label="EState_VSA1_transformed" name="P0000012"/>
+      <Parameter label="EState_VSA8_transformed" name="P0000013"/>
+      <Parameter label="Volume_transformed" name="P0000014"/>
+      <Parameter label="Plant_growth_transformed" name="P0000015"/>
+      <Parameter label="NP_concentration_transformed" name="P0000016"/>
+</ParameterList>
+    <CovariateList>
+      <Predictor name="Extend_transformed"/>
+      <Predictor name="Zeta_Prediction_transformed"/>
+      <Predictor name="Minimum_Ferets_Diameter_transformed"/>
+      <Predictor name="Maximum_Ferets_Diameter_transformed"/>
+      <Predictor name="Minor_Axis_transformed"/>
+      <Predictor name="Boxivity_transformed"/>
+      <Predictor name="Solidity_transformed"/>
+      <Predictor name="Minimum_projection_area_transformed"/>
+      <Predictor name="Maximum_projection_area_transformed"/>
+      <Predictor name="MinEStateIndex_transformed"/>
+      <Predictor name="EState_VSA1_transformed"/>
+      <Predictor name="EState_VSA8_transformed"/>
+      <Predictor name="Volume_transformed"/>
+      <Predictor name="Plant_growth_transformed"/>
+      <Predictor name="NP_concentration_transformed"/>
+</CovariateList>
+    <PPMatrix>
+      <PPCell parameterName="P0000002" predictorName="Extend_transformed" value="1"/>
+      <PPCell parameterName="P0000003" predictorName="Zeta_Prediction_transformed" value="1"/>
+      <PPCell parameterName="P0000004" predictorName="Minimum_Ferets_Diameter_transformed" value="1"/>
+      <PPCell parameterName="P0000005" predictorName="Maximum_Ferets_Diameter_transformed" value="1"/>
+      <PPCell parameterName="P0000006" predictorName="Minor_Axis_transformed" value="1"/>
+      <PPCell parameterName="P0000007" predictorName="Boxivity_transformed" value="1"/>
+      <PPCell parameterName="P0000008" predictorName="Solidity_transformed" value="1"/>
+      <PPCell parameterName="P0000009" predictorName="Minimum_projection_area_transformed" value="1"/>
+      <PPCell parameterName="P0000010" predictorName="Maximum_projection_area_transformed" value="1"/>
+      <PPCell parameterName="P0000011" predictorName="MinEStateIndex_transformed" value="1"/>
+      <PPCell parameterName="P0000012" predictorName="EState_VSA1_transformed" value="1"/>
+      <PPCell parameterName="P0000013" predictorName="EState_VSA8_transformed" value="1"/>
+      <PPCell parameterName="P0000014" predictorName="Volume_transformed" value="1"/>
+      <PPCell parameterName="P0000015" predictorName="Plant_growth_transformed" value="1"/>
+      <PPCell parameterName="P0000016" predictorName="NP_concentration_transformed" value="1"/>
+</PPMatrix>
+    <ParamMatrix>
+      <PCell beta="0.197560903572014" df="1" parameterName="P0000001"/>
+      <PCell beta="0.0842330293217065" df="1" parameterName="P0000002"/>
+      <PCell beta="0.00817223468158111" df="1" parameterName="P0000003"/>
+      <PCell beta="-3.1231199139472" df="1" parameterName="P0000004"/>
+      <PCell beta="0.482345996705691" df="1" parameterName="P0000005"/>
+      <PCell beta="2.60446970392119" df="1" parameterName="P0000006"/>
+      <PCell beta="-0.430418643494291" df="1" parameterName="P0000007"/>
+      <PCell beta="0.194353292685116" df="1" parameterName="P0000008"/>
+      <PCell beta="0.184237666412093" df="1" parameterName="P0000009"/>
+      <PCell beta="0.371902930976332" df="1" parameterName="P0000010"/>
+      <PCell beta="-0.0339589120440341" df="1" parameterName="P0000011"/>
+      <PCell beta="-0.101342176335764" df="1" parameterName="P0000012"/>
+      <PCell beta="0.00786328207133212" df="1" parameterName="P0000013"/>
+      <PCell beta="-0.540299749510297" df="1" parameterName="P0000014"/>
+      <PCell beta="0.00997429929545386" df="1" parameterName="P0000015"/>
+      <PCell beta="-0.0477546702549389" df="1" parameterName="P0000016"/>
+</ParamMatrix>
+  </GeneralRegressionModel>
+
+</PMML>
