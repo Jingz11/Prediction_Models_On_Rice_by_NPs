@@ -1,0 +1,77 @@
+Analysis
+Fields
+	Target
+		Positive_or_Negative_or_no_effect
+	Inputs
+		Perimeter
+		Extend
+		Diameter
+		Area
+		Circularity_#2
+		Minimum_Ferets_Diameter
+		Maximum_Ferets_Diameter
+		Major_Axis
+		Minor_Axis
+		Boundary_Size
+		Boxivity
+		Minimum_projection_area
+		Maximum_projection_area
+		Polarizability
+		MaxEStateIndex
+		MinEStateIndex
+		MinAbsEStateIndex
+		FpDensityMorgan1
+		Kappa1
+		Kappa3
+		SlogP_VSA3
+		EState_VSA8
+		EState_VSA9
+		MolMR
+		Formation_Energy
+		Count
+		NP_volume
+		NP_concentration
+		Primary_size
+Build Settings
+	Use partitioned data: true
+	Partition: Partition
+	Calculate predictor importance: true
+	Calculate raw propensity scores: false
+	Calculate adjusted propensity scores: false
+	Method: Stepwise
+	Mode: Simple
+	Prior probabilities: Compute from group sizes
+	Means: false
+	Univariate ANOVAS: false
+	Box's M: false
+	Within-groups correlation: false
+	Within-group covariance: false
+	Separate-groups covariance: false
+	Total covariance: true
+	Fisher's: true
+	Unstandardized: false
+	Casewise results: true
+	Limit cases to first: 10
+	Summary table: true
+	Leave-one-out classification: true
+	Combined-groups: false
+	Separate-groups: false
+	Territorial map: false
+	Summary of Steps: false
+	F for pairwise distances: false
+	Method: Wilks' lambda
+	V-to-enter: 0.0
+	Criteria: Use F value
+	Entry: 3.84
+	Removal: 2.71
+	Entry: 0.05
+	Removal: 0.1
+	Use covariance matrix: Within-groups
+Training Summary
+	Algorithm: Discriminant
+	Model type: Classification
+	Stream: F:\Article Archive\01 QSAR Rice biomass and yield\data analysis\model.str
+	User: dell
+	Date built: 9/7/22 9:14 AM
+	Application: IBM® SPSS® Modeler 18
+	Elapsed time for model build: 0 hours, 0 mins, 3 secs

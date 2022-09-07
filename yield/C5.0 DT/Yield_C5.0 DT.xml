@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header copyright="(C) Copyright IBM Corp. 1994, 2015">
+    <Application name="IBM SPSS Modeler" version="18"/>
+</Header>
+  <DataDictionary numberOfFields="9">
+    <DataField dataType="double" name="Area" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="MolMR" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="NP_concentration" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="EState_VSA8" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Extend" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Count" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Primary_size" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="double" name="Perimeter" optype="continuous">
+      <Extension extender="spss" name="storageType" value="numeric"/>
+</DataField>
+    <DataField dataType="string" name="Positive_or_Negative_or_no_effect" optype="categorical">
+      <Extension extender="spss" name="storageType" value="string"/>
+      <Value property="valid" value="Negative"/>
+      <Value property="valid" value="No effect"/>
+      <Value property="valid" value="Positive"/>
+</DataField>
+</DataDictionary>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 1">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField importance="0.192708" name="Area" usageType="active"/>
+      <MiningField importance="0.0885417" name="MolMR" usageType="active"/>
+      <MiningField importance="0.0885417" name="NP_concentration" usageType="active"/>
+      <MiningField importance="0.213542" name="EState_VSA8" usageType="active"/>
+      <MiningField importance="0.151042" name="Extend" usageType="active"/>
+      <MiningField importance="0.0885417" name="Count" usageType="active"/>
+      <MiningField importance="0.0885417" name="Primary_size" usageType="active"/>
+      <MiningField importance="0.0885417" name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="1" id="0" recordCount="37" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.1891891891891892" recordCount="7" value="Negative"/>
+      <ScoreDistribution confidence="0.5675675675675675" recordCount="21" value="No effect"/>
+      <ScoreDistribution confidence="0.24324324324324326" recordCount="9" value="Positive"/>
+      <Node defaultChild="2" id="1" recordCount="31" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.03225806451612903" recordCount="1" value="Negative"/>
+        <ScoreDistribution confidence="0.6774193548387096" recordCount="21" value="No effect"/>
+        <ScoreDistribution confidence="0.2903225806451613" recordCount="9" value="Positive"/>
+        <Node id="2" recordCount="19" score="No effect">
+          <SimplePredicate field="MolMR" operator="lessOrEqual" value="0"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.9473684210526315" recordCount="18" value="No effect"/>
+          <ScoreDistribution confidence="0.05263157894736842" recordCount="1" value="Positive"/>
+</Node>
+        <Node id="3" recordCount="12" score="Positive">
+          <SimplePredicate field="MolMR" operator="greaterThan" value="0"/>
+          <ScoreDistribution confidence="0.08333333333333333" recordCount="1" value="Negative"/>
+          <ScoreDistribution confidence="0.25" recordCount="3" value="No effect"/>
+          <ScoreDistribution confidence="0.6666666666666666" recordCount="8" value="Positive"/>
+</Node>
+</Node>
+      <Node id="4" recordCount="6" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="6" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 2">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="6" id="5" recordCount="36.9999993" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.19146959551428966" recordCount="7.0843749" value="Negative"/>
+      <ScoreDistribution confidence="0.5744087676239497" recordCount="21.253124" value="No effect"/>
+      <ScoreDistribution confidence="0.2341216368617607" recordCount="8.6625004" value="Positive"/>
+      <Node defaultChild="8" id="6" recordCount="32.2656243" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.07283292826291292" recordCount="2.3499999" value="Negative"/>
+        <ScoreDistribution confidence="0.6586924772442726" recordCount="21.253124" value="No effect"/>
+        <ScoreDistribution confidence="0.26847459449281447" recordCount="8.6625004" value="Positive"/>
+        <Node id="7" recordCount="2.3499999" score="Negative">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+          <ScoreDistribution confidence="1.0" recordCount="2.3499999" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node id="8" recordCount="29.9156244" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.7104355809467912" recordCount="21.253124" value="No effect"/>
+          <ScoreDistribution confidence="0.2895644190532089" recordCount="8.6625004" value="Positive"/>
+</Node>
+</Node>
+      <Node id="9" recordCount="4.734375" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="4.734375" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 3">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="11" id="10" recordCount="36.99999940000001" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.1582348052686725" recordCount="5.8546877" value="Negative"/>
+      <ScoreDistribution confidence="0.47470438607628723" recordCount="17.564062" value="No effect"/>
+      <ScoreDistribution confidence="0.36706081676314833" recordCount="13.58125" value="Positive"/>
+      <Node defaultChild="13" id="11" recordCount="33.087405100000005" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.05869584194137967" recordCount="1.9420931" value="Negative"/>
+        <ScoreDistribution confidence="0.5308383037870805" recordCount="17.564062" value="No effect"/>
+        <ScoreDistribution confidence="0.4104658542715397" recordCount="13.58125" value="Positive"/>
+        <Node id="12" recordCount="3.8841862" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.6125"/>
+          <ScoreDistribution confidence="0.5" recordCount="1.9420931" value="Negative"/>
+          <ScoreDistribution confidence="0.5" recordCount="1.9420931" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="14" id="13" recordCount="29.203218900000003" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.6125"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5349399685525762" recordCount="15.621969" value="No effect"/>
+          <ScoreDistribution confidence="0.4650600348717038" recordCount="13.58125" value="Positive"/>
+          <Node defaultChild="16" id="14" recordCount="26.5320384" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5887964115112995" recordCount="15.621969" value="No effect"/>
+            <ScoreDistribution confidence="0.41120357341258784" recordCount="10.910069" value="Positive"/>
+            <Node id="15" recordCount="11.085684" score="No effect">
+              <SimplePredicate field="Extend" operator="lessOrEqual" value="0"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="11.085684" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node id="16" recordCount="15.4463544" score="Positive">
+              <SimplePredicate field="Extend" operator="greaterThan" value="0"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.29368000257717763" recordCount="4.5362854" value="No effect"/>
+              <ScoreDistribution confidence="0.7063199974228223" recordCount="10.910069" value="Positive"/>
+</Node>
+</Node>
+          <Node id="17" recordCount="2.6711805" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="1.0" recordCount="2.6711805" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="18" recordCount="3.9125943" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="3.9125943" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 4">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="20" id="19" recordCount="36.9999999" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.1780232085892519" recordCount="6.5868587" value="Negative"/>
+      <ScoreDistribution confidence="0.527203541965415" recordCount="19.506531" value="No effect"/>
+      <ScoreDistribution confidence="0.2947732440399277" recordCount="10.90661" value="Positive"/>
+      <Node defaultChild="22" id="20" recordCount="33.8579368" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.10174263778530061" recordCount="3.4447958" value="Negative"/>
+        <ScoreDistribution confidence="0.5761287557250092" recordCount="19.506531" value="No effect"/>
+        <ScoreDistribution confidence="0.3221286064896902" recordCount="10.90661" value="Positive"/>
+        <Node id="21" recordCount="3.4447958" score="Negative">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+          <ScoreDistribution confidence="1.0" recordCount="3.4447958" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node id="22" recordCount="30.413141" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.641384952642675" recordCount="19.506531" value="No effect"/>
+          <ScoreDistribution confidence="0.3586150473573249" recordCount="10.90661" value="Positive"/>
+</Node>
+</Node>
+      <Node id="23" recordCount="3.1420631" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="3.1420631" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 5">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="25" id="24" recordCount="37.0000007" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.15212011063556546" recordCount="5.6284442" value="Negative"/>
+      <ScoreDistribution confidence="0.4504932617474248" recordCount="16.668251" value="No effect"/>
+      <ScoreDistribution confidence="0.39738661410349646" recordCount="14.703305" value="Positive"/>
+      <Node defaultChild="27" id="25" recordCount="34.3151207" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.08578037436423763" recordCount="2.9435639" value="Negative"/>
+        <ScoreDistribution confidence="0.48574070730283053" recordCount="16.668251" value="No effect"/>
+        <ScoreDistribution confidence="0.4284788950195941" recordCount="14.703305" value="Positive"/>
+        <Node id="26" recordCount="2.9435639" score="Negative">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+          <ScoreDistribution confidence="1.0" recordCount="2.9435639" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="29" id="27" recordCount="31.3715568" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5313173045973926" recordCount="16.668251" value="No effect"/>
+          <ScoreDistribution confidence="0.46868266990180096" recordCount="14.703305" value="Positive"/>
+          <Node id="28" recordCount="12.1963818" score="No effect">
+            <SimplePredicate field="MolMR" operator="lessOrEqual" value="0"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.7746912367075948" recordCount="9.4484301" value="No effect"/>
+            <ScoreDistribution confidence="0.22530876329240532" recordCount="2.7479517" value="Positive"/>
+</Node>
+          <Node id="29" recordCount="19.175175" score="Positive">
+            <SimplePredicate field="MolMR" operator="greaterThan" value="0"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.3765191712722309" recordCount="7.219821" value="No effect"/>
+            <ScoreDistribution confidence="0.6234808287277691" recordCount="11.955354" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="30" recordCount="2.68488" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.68488" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 6">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="32" id="31" recordCount="36.99999919" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.12811314334517965" recordCount="4.7401862" value="Negative"/>
+      <ScoreDistribution confidence="0.49666822708922337" recordCount="18.376724" value="No effect"/>
+      <ScoreDistribution confidence="0.3752186568628949" recordCount="13.88309" value="Positive"/>
+      <Node defaultChild="34" id="32" recordCount="34.738835689999995" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.07136171811059337" recordCount="2.479023" value="Negative"/>
+        <ScoreDistribution confidence="0.5289965433496082" recordCount="18.376724" value="No effect"/>
+        <ScoreDistribution confidence="0.3996417762497555" recordCount="13.88309" value="Positive"/>
+        <Node id="33" recordCount="2.479023" score="Negative">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+          <ScoreDistribution confidence="1.0" recordCount="2.479023" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="35" id="34" recordCount="32.25981269" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5696475728669211" recordCount="18.376724" value="No effect"/>
+          <ScoreDistribution confidence="0.43035246774087826" recordCount="13.88309" value="Positive"/>
+          <Node id="35" recordCount="28.068472" score="No effect">
+            <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="11.875"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.6412840356967063" recordCount="17.999863" value="No effect"/>
+            <ScoreDistribution confidence="0.3587159643032938" recordCount="10.068609" value="Positive"/>
+</Node>
+          <Node id="36" recordCount="4.19134069" score="Positive">
+            <SimplePredicate field="NP_concentration" operator="greaterThan" value="11.875"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.08991409142643568" recordCount="0.37686059" value="No effect"/>
+            <ScoreDistribution confidence="0.9100859085735644" recordCount="3.8144801" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="37" recordCount="2.2611635" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.2611635" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 7">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="40" id="38" recordCount="36.9999995" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.10868348525247953" recordCount="4.0212889" value="Negative"/>
+      <ScoreDistribution confidence="0.43498205993218997" recordCount="16.094336" value="No effect"/>
+      <ScoreDistribution confidence="0.4563345196801962" recordCount="16.884377" value="Positive"/>
+      <Node id="39" recordCount="2.1030538" score="Negative">
+        <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.1030538" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+      <Node defaultChild="41" id="40" recordCount="34.8969457" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+        <ScoreDistribution confidence="0.054968567062876214" recordCount="1.9182351" value="Negative"/>
+        <ScoreDistribution confidence="0.46119612124106313" recordCount="16.094336" value="No effect"/>
+        <ScoreDistribution confidence="0.48383538046998764" recordCount="16.884377" value="Positive"/>
+        <Node defaultChild="43" id="41" recordCount="31.272660600000002" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="Count" operator="lessOrEqual" value="0.695716"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5146455623286493" recordCount="16.094336" value="No effect"/>
+          <ScoreDistribution confidence="0.48535448243888785" recordCount="15.178326" value="Positive"/>
+          <Node id="42" recordCount="4.4758816" score="No effect">
+            <SimplePredicate field="Primary_size" operator="lessOrEqual" value="-0.335366"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="1.0" recordCount="4.4758816" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+          <Node id="43" recordCount="26.796779" score="Positive">
+            <SimplePredicate field="Primary_size" operator="greaterThan" value="-0.335366"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.43357647573986413" recordCount="11.618453" value="No effect"/>
+            <ScoreDistribution confidence="0.5664235242601359" recordCount="15.178326" value="Positive"/>
+</Node>
+</Node>
+        <Node id="44" recordCount="3.6242851" score="Negative">
+          <SimplePredicate field="Count" operator="greaterThan" value="0.695716"/>
+          <ScoreDistribution confidence="0.5292726833217398" recordCount="1.9182351" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.47072731667826023" recordCount="1.70605" value="Positive"/>
+</Node>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 8">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="46" id="45" recordCount="36.999999200000005" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.09680430479576874" recordCount="3.5817592" value="Negative"/>
+      <ScoreDistribution confidence="0.48295671314501" recordCount="17.869398" value="No effect"/>
+      <ScoreDistribution confidence="0.42023898205922117" recordCount="15.548842" value="Positive"/>
+      <Node defaultChild="48" id="46" recordCount="28.0202613" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.5535485138391625" recordCount="15.510574" value="No effect"/>
+        <ScoreDistribution confidence="0.4464514754542992" recordCount="12.509687" value="Positive"/>
+        <Node id="47" recordCount="6.4208164" score="No effect">
+          <SimplePredicate field="Extend" operator="lessOrEqual" value="0"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="1.0" recordCount="6.4208164" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node id="48" recordCount="21.5994449" score="Positive">
+          <SimplePredicate field="Extend" operator="greaterThan" value="0"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.4208329400168983" recordCount="9.0897579" value="No effect"/>
+          <ScoreDistribution confidence="0.5791670599831016" recordCount="12.509687" value="Positive"/>
+</Node>
+</Node>
+      <Node id="49" recordCount="8.9797379" score="Negative">
+        <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+        <ScoreDistribution confidence="0.3988712409969115" recordCount="3.5817592" value="Negative"/>
+        <ScoreDistribution confidence="0.26268288966429637" recordCount="2.3588235" value="No effect"/>
+        <ScoreDistribution confidence="0.33844586933879217" recordCount="3.0391552" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 9">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="51" id="50" recordCount="36.999999700000004" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.08817779801225241" recordCount="3.2625785" value="Negative"/>
+      <ScoreDistribution confidence="0.5036389770565322" recordCount="18.634642" value="No effect"/>
+      <ScoreDistribution confidence="0.4081832195258098" recordCount="15.102779" value="Positive"/>
+      <Node defaultChild="53" id="51" recordCount="33.5950221" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Count" operator="lessOrEqual" value="0.695716"/>
+        <ScoreDistribution confidence="0.050789173316245564" recordCount="1.7062634" value="Negative"/>
+        <ScoreDistribution confidence="0.5546846179928543" recordCount="18.634642" value="No effect"/>
+        <ScoreDistribution confidence="0.3945262176207945" recordCount="13.254117" value="Positive"/>
+        <Node id="52" recordCount="4.6588281" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.5625"/>
+          <ScoreDistribution confidence="0.3662430472590307" recordCount="1.7062634" value="Negative"/>
+          <ScoreDistribution confidence="0.6337569527409693" recordCount="2.9525647" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="54" id="53" recordCount="28.936194" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.5625"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5419536860998374" recordCount="15.682077" value="No effect"/>
+          <ScoreDistribution confidence="0.45804631390016254" recordCount="13.254117" value="Positive"/>
+          <Node id="54" recordCount="25.2283283" score="No effect">
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.6216058715234016" recordCount="15.682077" value="No effect"/>
+            <ScoreDistribution confidence="0.37839412847659826" recordCount="9.5462513" value="Positive"/>
+</Node>
+          <Node id="55" recordCount="3.7078657" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="1.0" recordCount="3.7078657" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="56" recordCount="3.4049776" score="Positive">
+        <SimplePredicate field="Count" operator="greaterThan" value="0.695716"/>
+        <ScoreDistribution confidence="0.45707058395920136" recordCount="1.5563151" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.5429294160407987" recordCount="1.8486625" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 10">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="58" id="57" recordCount="37.0000004" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.12958963373416613" recordCount="4.7948165" value="Negative"/>
+      <ScoreDistribution confidence="0.44439640060112" recordCount="16.442667" value="No effect"/>
+      <ScoreDistribution confidence="0.4260139683674166" recordCount="15.762517" value="Positive"/>
+      <Node defaultChild="60" id="58" recordCount="34.1303384" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.056405962854443895" recordCount="1.9251546" value="Negative"/>
+        <ScoreDistribution confidence="0.4817610305322962" recordCount="16.442667" value="No effect"/>
+        <ScoreDistribution confidence="0.4618330124731491" recordCount="15.762517" value="Positive"/>
+        <Node id="59" recordCount="4.3015372" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.6125"/>
+          <ScoreDistribution confidence="0.4475503780369492" recordCount="1.9251546" value="Negative"/>
+          <ScoreDistribution confidence="0.5524496219630507" recordCount="2.3763826" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="61" id="60" recordCount="29.8288012" score="Positive">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.6125"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.4715671577173541" recordCount="14.066283" value="No effect"/>
+          <ScoreDistribution confidence="0.5284328020530707" recordCount="15.762517" value="Positive"/>
+          <Node defaultChild="63" id="61" recordCount="26.557088200000003" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5296620960124687" recordCount="14.066283" value="No effect"/>
+            <ScoreDistribution confidence="0.47033789645658514" recordCount="12.490805" value="Positive"/>
+            <Node id="62" recordCount="5.1606693" score="No effect">
+              <SimplePredicate field="Extend" operator="lessOrEqual" value="0"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="5.1606693" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node id="63" recordCount="21.3964189" score="Positive">
+              <SimplePredicate field="Extend" operator="greaterThan" value="0"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.4162198329366229" recordCount="8.9056139" value="No effect"/>
+              <ScoreDistribution confidence="0.5837801670633771" recordCount="12.490805" value="Positive"/>
+</Node>
+</Node>
+          <Node id="64" recordCount="3.271713" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="1.0" recordCount="3.271713" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="65" recordCount="2.869662" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.869662" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 11">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="67" id="66" recordCount="37.0000005" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.14413445480899387" recordCount="5.3329749" value="Negative"/>
+      <ScoreDistribution confidence="0.49227599334762173" recordCount="18.214212" value="No effect"/>
+      <ScoreDistribution confidence="0.36358953562716845" recordCount="13.452813" value="Positive"/>
+      <Node defaultChild="69" id="67" recordCount="34.5508342" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.0834656721544512" recordCount="2.8838086" value="Negative"/>
+        <ScoreDistribution confidence="0.5271714105241488" recordCount="18.214212" value="No effect"/>
+        <ScoreDistribution confidence="0.38936289995568335" recordCount="13.452813" value="Positive"/>
+        <Node id="68" recordCount="2.8838086" score="Negative">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+          <ScoreDistribution confidence="1.0" recordCount="2.8838086" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="71" id="69" recordCount="31.667025599999995" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="1"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5751791226012715" recordCount="18.214212" value="No effect"/>
+          <ScoreDistribution confidence="0.424820858451575" recordCount="13.452813" value="Positive"/>
+          <Node id="70" recordCount="9.2249407" score="No effect">
+            <SimplePredicate field="Extend" operator="lessOrEqual" value="0"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.6973092737604265" recordCount="6.4326367" value="No effect"/>
+            <ScoreDistribution confidence="0.3026907262395736" recordCount="2.792304" value="Positive"/>
+</Node>
+          <Node defaultChild="73" id="71" recordCount="22.442084899999998" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="Extend" operator="greaterThan" value="0"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5249768928554406" recordCount="11.781576" value="No effect"/>
+            <ScoreDistribution confidence="0.4750230670413336" recordCount="10.660508" value="Positive"/>
+            <Node id="72" recordCount="2.76034" score="Positive">
+              <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.3125"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+              <ScoreDistribution confidence="1.0" recordCount="2.76034" value="Positive"/>
+</Node>
+            <Node id="73" recordCount="19.681744899999998" score="No effect">
+              <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.3125"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.598604242655335" recordCount="11.781576" value="No effect"/>
+              <ScoreDistribution confidence="0.40139575734466515" recordCount="7.9001689" value="Positive"/>
+</Node>
+</Node>
+</Node>
+</Node>
+      <Node id="74" recordCount="2.4491663" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.4491663" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 12">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="76" id="75" recordCount="36.99999977" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.12274640346572088" recordCount="4.5416169" value="Negative"/>
+      <ScoreDistribution confidence="0.4192273809843864" recordCount="15.511413" value="No effect"/>
+      <ScoreDistribution confidence="0.4580262190634062" recordCount="16.94697" value="Positive"/>
+      <Node defaultChild="78" id="76" recordCount="34.91426447" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.07034034476396346" recordCount="2.4558814" value="Negative"/>
+        <ScoreDistribution confidence="0.4442715100966296" recordCount="15.511413" value="No effect"/>
+        <ScoreDistribution confidence="0.4853881431344958" recordCount="16.94697" value="Positive"/>
+        <Node id="77" recordCount="2.4558814" score="Negative">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+          <ScoreDistribution confidence="1.0" recordCount="2.4558814" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="79" id="78" recordCount="32.45838307" score="Positive">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.47788618941824573" recordCount="15.511413" value="No effect"/>
+          <ScoreDistribution confidence="0.5221138084251467" recordCount="16.94697" value="Positive"/>
+          <Node defaultChild="80" id="79" recordCount="26.823509169999998" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="0"/>
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5138851860373496" recordCount="13.784204" value="No effect"/>
+            <ScoreDistribution confidence="0.4861148449056564" recordCount="13.039306" value="Positive"/>
+            <Node id="80" recordCount="23.167768" score="No effect">
+              <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="11.875"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.5660313932701674" recordCount="13.113684" value="No effect"/>
+              <ScoreDistribution confidence="0.43396860672983256" recordCount="10.054084" value="Positive"/>
+</Node>
+            <Node id="81" recordCount="3.65574117" score="Positive">
+              <SimplePredicate field="NP_concentration" operator="greaterThan" value="11.875"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.18341554798859022" recordCount="0.67051977" value="No effect"/>
+              <ScoreDistribution confidence="0.8165844520114098" recordCount="2.9852214" value="Positive"/>
+</Node>
+</Node>
+          <Node id="82" recordCount="5.634873900000001" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.3065213047624721" recordCount="1.7272089" value="No effect"/>
+            <ScoreDistribution confidence="0.6934786952375278" recordCount="3.907665" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="83" recordCount="2.0857353" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.0857353" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 13">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="86" id="84" recordCount="37.000000459999995" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.10762525812141573" recordCount="3.9821346" value="Negative"/>
+      <ScoreDistribution confidence="0.39599891399568926" recordCount="14.65196" value="No effect"/>
+      <ScoreDistribution confidence="0.49637583166667887" recordCount="18.365906" value="Positive"/>
+      <Node id="85" recordCount="2.1533411" score="Negative">
+        <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.1533411" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+      <Node defaultChild="87" id="86" recordCount="34.84665936" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+        <ScoreDistribution confidence="0.05248116845597104" recordCount="1.8287934" value="Negative"/>
+        <ScoreDistribution confidence="0.4204695735287264" recordCount="14.65196" value="No effect"/>
+        <ScoreDistribution confidence="0.5270492591631889" recordCount="18.365906" value="Positive"/>
+        <Node defaultChild="88" id="87" recordCount="32.1427157" score="Positive">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="Area" operator="lessOrEqual" value="0.416706"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.4286137527576738" recordCount="13.77681" value="No effect"/>
+          <ScoreDistribution confidence="0.5713862565757006" recordCount="18.365906" value="Positive"/>
+          <Node defaultChild="90" id="88" recordCount="26.611215599999998" score="Positive">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.4385966118736794" recordCount="11.671589" value="No effect"/>
+            <ScoreDistribution confidence="0.5614033655794364" recordCount="14.939626" value="Positive"/>
+            <Node id="89" recordCount="2.8742816" score="No effect">
+              <SimplePredicate field="Extend" operator="lessOrEqual" value="-0.333333"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="2.8742816" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node id="90" recordCount="23.736933999999998" score="Positive">
+              <SimplePredicate field="Extend" operator="greaterThan" value="-0.333333"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.37061686231254637" recordCount="8.797308" value="No effect"/>
+              <ScoreDistribution confidence="0.6293831376874537" recordCount="14.939626" value="Positive"/>
+</Node>
+</Node>
+          <Node id="91" recordCount="5.531500100000001" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.38058764565510894" recordCount="2.1052206" value="No effect"/>
+            <ScoreDistribution confidence="0.619412354344891" recordCount="3.4262795" value="Positive"/>
+</Node>
+</Node>
+        <Node id="92" recordCount="2.70394366" score="Negative">
+          <SimplePredicate field="Area" operator="greaterThan" value="0.416706"/>
+          <ScoreDistribution confidence="0.6763430122652778" recordCount="1.8287934" value="Negative"/>
+          <ScoreDistribution confidence="0.3236569877347223" recordCount="0.87515026" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 14">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="94" id="93" recordCount="36.9999995" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.09328297153085097" recordCount="3.4514699" value="Negative"/>
+      <ScoreDistribution confidence="0.47648895238498584" recordCount="17.630091" value="No effect"/>
+      <ScoreDistribution confidence="0.43022811392200155" recordCount="15.91844" value="Positive"/>
+      <Node defaultChild="96" id="94" recordCount="28.1375041" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+        <ScoreDistribution confidence="0.5398045592821433" recordCount="15.188753" value="No effect"/>
+        <ScoreDistribution confidence="0.46019543716388117" recordCount="12.948751" value="Positive"/>
+        <Node id="95" recordCount="5.3830976" score="No effect">
+          <SimplePredicate field="Extend" operator="lessOrEqual" value="0"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="1.0" recordCount="5.3830976" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node id="96" recordCount="22.7544065" score="Positive">
+          <SimplePredicate field="Extend" operator="greaterThan" value="0"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.4309343555060423" recordCount="9.8056555" value="No effect"/>
+          <ScoreDistribution confidence="0.5690656444939576" recordCount="12.948751" value="Positive"/>
+</Node>
+</Node>
+      <Node id="97" recordCount="8.8624954" score="Negative">
+        <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+        <ScoreDistribution confidence="0.3894467352840601" recordCount="3.4514699" value="Negative"/>
+        <ScoreDistribution confidence="0.27546830659003785" recordCount="2.4413366" value="No effect"/>
+        <ScoreDistribution confidence="0.3350849581259021" recordCount="2.9696889" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 15">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="99" id="98" recordCount="37.0000002" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.08625286980403854" recordCount="3.1913562" value="Negative"/>
+      <ScoreDistribution confidence="0.49510383516160084" recordCount="18.318842" value="No effect"/>
+      <ScoreDistribution confidence="0.41864326800733365" recordCount="15.489801" value="Positive"/>
+      <Node defaultChild="101" id="99" recordCount="34.2812659" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Count" operator="lessOrEqual" value="0.695716"/>
+        <ScoreDistribution confidence="0.05034024429068706" recordCount="1.7257273" value="Negative"/>
+        <ScoreDistribution confidence="0.534368889802287" recordCount="18.318842" value="No effect"/>
+        <ScoreDistribution confidence="0.4152908484047551" recordCount="14.236696" value="Positive"/>
+        <Node id="100" recordCount="4.557567300000001" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.5625"/>
+          <ScoreDistribution confidence="0.3786509746109508" recordCount="1.7257273" value="Negative"/>
+          <ScoreDistribution confidence="0.621349025389049" recordCount="2.83184" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="102" id="101" recordCount="29.7236986" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.5625"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5210321302342906" recordCount="15.487002" value="No effect"/>
+          <ScoreDistribution confidence="0.47896784957979627" recordCount="14.236696" value="Positive"/>
+          <Node id="102" recordCount="26.206789999999998" score="No effect">
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5909537947989816" recordCount="15.487002" value="No effect"/>
+            <ScoreDistribution confidence="0.40904620520101853" recordCount="10.719788" value="Positive"/>
+</Node>
+          <Node id="103" recordCount="3.5169086" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="1.0" recordCount="3.5169086" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="104" recordCount="2.7187343" score="Negative">
+        <SimplePredicate field="Count" operator="greaterThan" value="0.695716"/>
+        <ScoreDistribution confidence="0.5390850073138813" recordCount="1.4656289" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.4609149926861187" recordCount="1.2531054" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 16">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="107" id="105" recordCount="37" score="Positive">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.09028221351351351" recordCount="3.3404419" value="Negative"/>
+      <ScoreDistribution confidence="0.44409437837837834" recordCount="16.431492" value="No effect"/>
+      <ScoreDistribution confidence="0.4656233783783784" recordCount="17.228065" value="Positive"/>
+      <Node id="106" recordCount="2.0258136" score="Negative">
+        <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.0258136" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+      <Node defaultChild="108" id="107" recordCount="34.9741864" score="Positive">
+        <Extension extender="spss" name="defaultChild" value="0"/>
+        <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+        <ScoreDistribution confidence="0.03758853415386383" recordCount="1.3146284" value="Negative"/>
+        <ScoreDistribution confidence="0.46981770532337525" recordCount="16.431492" value="No effect"/>
+        <ScoreDistribution confidence="0.4925937319302444" recordCount="17.228065" value="Positive"/>
+        <Node defaultChild="109" id="108" recordCount="32.1063663" score="No effect">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="Count" operator="lessOrEqual" value="0.695716"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.5117829855445211" recordCount="16.431492" value="No effect"/>
+          <ScoreDistribution confidence="0.4882170051115377" recordCount="15.674874" value="Positive"/>
+          <Node id="109" recordCount="28.48057" score="Positive">
+            <SimplePredicate field="Perimeter" operator="lessOrEqual" value="0"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.44962920334810713" recordCount="12.805696" value="No effect"/>
+            <ScoreDistribution confidence="0.5503707966518929" recordCount="15.674874" value="Positive"/>
+</Node>
+          <Node id="110" recordCount="3.6257963" score="No effect">
+            <SimplePredicate field="Perimeter" operator="greaterThan" value="0"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="1.0" recordCount="3.6257963" value="No effect"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+        <Node id="111" recordCount="2.8678201" score="Positive">
+          <SimplePredicate field="Count" operator="greaterThan" value="0.695716"/>
+          <ScoreDistribution confidence="0.4584068575291735" recordCount="1.3146284" value="Negative"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+          <ScoreDistribution confidence="0.5415931424708266" recordCount="1.5531917" value="Positive"/>
+</Node>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 17">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="113" id="112" recordCount="37" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="0"/>
+      <True/>
+      <ScoreDistribution confidence="0.10477013783783784" recordCount="3.8764951" value="Negative"/>
+      <ScoreDistribution confidence="0.47417175675675677" recordCount="17.544355" value="No effect"/>
+      <ScoreDistribution confidence="0.42105808108108106" recordCount="15.579149" value="Positive"/>
+      <Node defaultChild="115" id="113" recordCount="34.9554257" score="No effect">
+        <Extension extender="spss" name="defaultChild" value="1"/>
+        <SimplePredicate field="Area" operator="lessOrEqual" value="0.55792"/>
+        <ScoreDistribution confidence="0.052407340586328496" recordCount="1.8319209" value="Negative"/>
+        <ScoreDistribution confidence="0.5019064894409224" recordCount="17.544355" value="No effect"/>
+        <ScoreDistribution confidence="0.4456861470864593" recordCount="15.579149" value="Positive"/>
+        <Node id="114" recordCount="4.3888102" score="No effect">
+          <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.6125"/>
+          <ScoreDistribution confidence="0.41740718247510455" recordCount="1.8319209" value="Negative"/>
+          <ScoreDistribution confidence="0.5825928175248954" recordCount="2.5568893" value="No effect"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+        <Node defaultChild="116" id="115" recordCount="30.5666155" score="Positive">
+          <Extension extender="spss" name="defaultChild" value="0"/>
+          <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.6125"/>
+          <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+          <ScoreDistribution confidence="0.49032144235923014" recordCount="14.987467" value="No effect"/>
+          <ScoreDistribution confidence="0.5096785739984854" recordCount="15.579149" value="Positive"/>
+          <Node defaultChild="118" id="116" recordCount="27.7139734" score="No effect">
+            <Extension extender="spss" name="defaultChild" value="1"/>
+            <SimplePredicate field="EState_VSA8" operator="lessOrEqual" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.5407909859652243" recordCount="14.987467" value="No effect"/>
+            <ScoreDistribution confidence="0.45920903568450416" recordCount="12.726507" value="Positive"/>
+            <Node id="117" recordCount="5.0908313" score="No effect">
+              <SimplePredicate field="Extend" operator="lessOrEqual" value="0"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="1.0" recordCount="5.0908313" value="No effect"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+            <Node id="118" recordCount="22.6231421" score="Positive">
+              <SimplePredicate field="Extend" operator="greaterThan" value="0"/>
+              <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+              <ScoreDistribution confidence="0.437456258562775" recordCount="9.8966351" value="No effect"/>
+              <ScoreDistribution confidence="0.5625437414372251" recordCount="12.726507" value="Positive"/>
+</Node>
+</Node>
+          <Node id="119" recordCount="2.8526421" score="Positive">
+            <SimplePredicate field="EState_VSA8" operator="greaterThan" value="0.0121989"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="Negative"/>
+            <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+            <ScoreDistribution confidence="1.0" recordCount="2.8526421" value="Positive"/>
+</Node>
+</Node>
+</Node>
+      <Node id="120" recordCount="2.0445743" score="Negative">
+        <SimplePredicate field="Area" operator="greaterThan" value="0.55792"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.0445743" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+  <TreeModel algorithmName="C5" functionName="classification" missingValueStrategy="weightedConfidence" modelName="Positive_or_Negative_or_no_effect 18">
+    <Extension extender="spss" name="missingValueStrategy" value="weightedConfidence"/>
+    <Extension extender="spss" name="boost" value="1"/>
+    <MiningSchema>
+      <MiningField name="Area" usageType="active"/>
+      <MiningField name="MolMR" usageType="active"/>
+      <MiningField name="NP_concentration" usageType="active"/>
+      <MiningField name="EState_VSA8" usageType="active"/>
+      <MiningField name="Extend" usageType="active"/>
+      <MiningField name="Count" usageType="active"/>
+      <MiningField name="Primary_size" usageType="active"/>
+      <MiningField name="Perimeter" usageType="active"/>
+      <MiningField name="Positive_or_Negative_or_no_effect" usageType="predicted"/>
+</MiningSchema>
+    <Node defaultChild="123" id="121" recordCount="37.0000005" score="No effect">
+      <Extension extender="spss" name="defaultChild" value="1"/>
+      <True/>
+      <ScoreDistribution confidence="0.12024339296968387" recordCount="4.4490056" value="Negative"/>
+      <ScoreDistribution confidence="0.5151094524985209" recordCount="19.05905" value="No effect"/>
+      <ScoreDistribution confidence="0.36464715723449787" recordCount="13.491945" value="Positive"/>
+      <Node id="122" recordCount="2.6783514" score="Negative">
+        <SimplePredicate field="NP_concentration" operator="lessOrEqual" value="-0.62375"/>
+        <ScoreDistribution confidence="1.0" recordCount="2.6783514" value="Negative"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="No effect"/>
+        <ScoreDistribution confidence="0.0" recordCount="0" value="Positive"/>
+</Node>
+      <Node id="123" recordCount="34.3216491" score="No effect">
+        <SimplePredicate field="NP_concentration" operator="greaterThan" value="-0.62375"/>
+        <ScoreDistribution confidence="0.0515900064953464" recordCount="1.7706541" value="Negative"/>
+        <ScoreDistribution confidence="0.5553069418217436" recordCount="19.05905" value="No effect"/>
+        <ScoreDistribution confidence="0.39310305168290993" recordCount="13.491945" value="Positive"/>
+</Node>
+</Node>
+    <Extension/>
+</TreeModel>
+</PMML>

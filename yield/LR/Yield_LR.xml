@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?><PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Header copyright="(C) Copyright IBM Corp. 1994, 2016">
+    <Application name="IBM SPSS Modeler Common" version="18.0.0.0"/>
+    <Timestamp>Wed Sep 07 09:15:39 2022
+</Timestamp>
+  </Header><DataDictionary>
+    <DataField dataType="double" displayName="Change_percent" name="Change_percent" optype="continuous"/>
+    <DataField dataType="string" displayName="Growth_stages" name="Growth_stages" optype="categorical">
+      <Extension extender="spss.com">
+        <Action reasonKey="ScreenFeatureWithConstantValue" stepKey="ScreenFeatures"/>
+        <UsageType value="disable"/>
+</Extension>
+      <Extension extender="spss.com" name="noSpaceTrim" value="true"/>
+      <Value property="valid" value="reproductive"/>
+</DataField>    <DataField dataType="double" displayName="Perimeter" name="Perimeter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.667021228558862"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.906049137982819" rightMargin="2.92473118279569"/>
+</DataField>    <DataField dataType="double" displayName="Extend" name="Extend" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0622309953261622"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-2.16666666666666" rightMargin="2"/>
+</DataField>    <DataField dataType="double" displayName="Diameter" name="Diameter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.665287376889957"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.10975387420237" rightMargin="3.05050136736554"/>
+</DataField>    <DataField dataType="double" displayName="Area" name="Area" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.700810421704205"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.455909229657621" rightMargin="6.2157746892472"/>
+</DataField>    <DataField dataType="double" displayName="Circularity_#2" name="Circularity_#2" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.0580677382520625"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-2.99999999999999" rightMargin="1.12499999999999"/>
+</DataField>    <DataField dataType="double" displayName="Minimum_Ferets_Diameter" name="Minimum_Ferets_Diameter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.670870025690777"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.586513697026457" rightMargin="2.81713884336221"/>
+</DataField>    <DataField dataType="double" displayName="Maximum_Ferets_Diameter" name="Maximum_Ferets_Diameter" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.668409190655392"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.04067660088602" rightMargin="3.43878372935964"/>
+</DataField>    <DataField dataType="double" displayName="Major_Axis" name="Major_Axis" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.668040557360098"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.900247320692498" rightMargin="3.3318219291014"/>
+</DataField>    <DataField dataType="double" displayName="Minor_Axis" name="Minor_Axis" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.668167614934882"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.575631282177004" rightMargin="2.7484677617063"/>
+</DataField>    <DataField dataType="double" displayName="Boundary_Size" name="Boundary_Size" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.672208351577439"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.906087408949011" rightMargin="3.13982830385015"/>
+</DataField>    <DataField dataType="double" displayName="Boxivity" name="Boxivity" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.126732000266704"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-2.75" rightMargin="0.625"/>
+</DataField>    <DataField dataType="double" displayName="Minimum_projection_area" name="Minimum_projection_area" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.515190172232288"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.395928791561728" rightMargin="2.42768701587832"/>
+</DataField>    <DataField dataType="double" displayName="Maximum_projection_area" name="Maximum_projection_area" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.527902672635015"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396138357804356" rightMargin="2.68487539769653"/>
+</DataField>    <DataField dataType="double" displayName="Polarizability" name="Polarizability" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.519164191512464"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396697893192688" rightMargin="2.52166758737134"/>
+</DataField>    <DataField dataType="double" displayName="MaxEStateIndex" name="MaxEStateIndex" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.508568907254598"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.397297485947881" rightMargin="2.38088547710007"/>
+</DataField>    <DataField dataType="double" displayName="MinEStateIndex" name="MinEStateIndex" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.618919362588108"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.0502059724405428" rightMargin="3.1348904719754"/>
+</DataField>    <DataField dataType="double" displayName="MinAbsEStateIndex" name="MinAbsEStateIndex" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.619239260523276"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.0176612013382781" rightMargin="3.1350438016952"/>
+</DataField>    <DataField dataType="double" displayName="FpDensityMorgan1" name="FpDensityMorgan1" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.51875726390867"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.397611800235098" rightMargin="2.58100022675082"/>
+</DataField>    <DataField dataType="double" displayName="Kappa1" name="Kappa1" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.516171610878905"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396391131570609" rightMargin="2.45593098028594"/>
+</DataField>    <DataField dataType="double" displayName="Kappa3" name="Kappa3" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.584704860855073"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.236608533451317" rightMargin="3.07825841710425"/>
+</DataField>    <DataField dataType="double" displayName="SlogP_VSA3" name="SlogP_VSA3" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.506550779147488"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396863502197337" rightMargin="2.30405655916277"/>
+</DataField>    <DataField dataType="double" displayName="EState_VSA8" name="EState_VSA8" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.621857262448138"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="0" rightMargin="3.13962281913765"/>
+</DataField>    <DataField dataType="double" displayName="EState_VSA9" name="EState_VSA9" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.531215492298271"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396570645921844" rightMargin="2.80206418126387"/>
+</DataField>    <DataField dataType="double" displayName="MolMR" name="MolMR" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.51508405175472"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.39500118226894" rightMargin="2.58380799336903"/>
+</DataField>    <DataField dataType="double" displayName="Formation_Energy" name="Formation_Energy" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.364678086678947"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.17489442375395" rightMargin="0.397327510082031"/>
+</DataField>    <DataField dataType="double" displayName="Count" name="Count" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.415590146578351"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396432344100615" rightMargin="2.04149367631571"/>
+</DataField>    <DataField dataType="double" displayName="NP_volume" name="NP_volume" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.522423984740679"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.396163253418938" rightMargin="2.56986826095076"/>
+</DataField>    <DataField dataType="double" displayName="NP_concentration" name="NP_concentration" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.00821479258038368"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-0.62375" rightMargin="24.375"/>
+</DataField>    <DataField dataType="double" displayName="Primary_size" name="Primary_size" optype="continuous">
+      <Extension extender="spss.com">
+        <UsageType value="disable"/>
+        <PredictivePower value="0.309852828762068"/>
+</Extension>
+      <Interval closure="closedClosed" leftMargin="-1.03658536585365" rightMargin="1.21951219512195"/>
+</DataField>  </DataDictionary><TransformationDictionary>
+    <DefineFunction dataType="double" name="computeBounds" optype="continuous">
+      <ParameterField name="RobustMean"/>
+      <ParameterField name="RobustSD"/>
+      <ParameterField name="CutOff"/>
+      <ParameterField name="AnalysisWeight"/>
+      <ParameterField name="Coeff"/>
+      <Apply function="+">
+        <FieldRef field="RobustMean"/>
+        <Apply function="*">
+          <FieldRef field="Coeff"/>
+          <Apply function="*">
+            <FieldRef field="CutOff"/>
+            <Apply function="/">
+              <FieldRef field="RobustSD"/>
+              <Apply function="sqrt">
+                <FieldRef field="AnalysisWeight"/>
+</Apply>
+</Apply>
+</Apply>
+</Apply>
+</Apply>
+</DefineFunction>    <DefineFunction dataType="double" name="treatOutlier" optype="continuous">
+      <ParameterField name="Extreme"/>
+      <ParameterField name="OUTLIER-TREATMENT-METHOD"/>
+      <Apply function="if">
+        <Apply function="equal">
+          <FieldRef field="OUTLIER-TREATMENT-METHOD"/>
+          <Constant>asExtremeValues</Constant>
+</Apply>
+        <FieldRef field="Extreme"/>
+</Apply>
+</DefineFunction>    <DefineFunction dataType="double" name="outlierHandle" optype="continuous">
+      <ParameterField name="Var"/>
+      <ParameterField name="OUTLIER-TREATMENT-METHOD"/>
+      <ParameterField name="RobustMean"/>
+      <ParameterField name="RobustSD"/>
+      <ParameterField name="CutOff"/>
+      <ParameterField name="AnalysisWeight"/>
+      <Apply function="if">
+        <Apply function="lessThan">
+          <FieldRef field="Var"/>
+          <Apply function="computeBounds">
+            <FieldRef field="RobustMean"/>
+            <FieldRef field="RobustSD"/>
+            <FieldRef field="CutOff"/>
+            <FieldRef field="AnalysisWeight"/>
+            <Constant>-1</Constant>
+</Apply>
+</Apply>
+        <Apply function="treatOutlier">
+          <Apply function="computeBounds">
+            <FieldRef field="RobustMean"/>
+            <FieldRef field="RobustSD"/>
+            <FieldRef field="CutOff"/>
+            <FieldRef field="AnalysisWeight"/>
+            <Constant>-1</Constant>
+</Apply>
+          <FieldRef field="OUTLIER-TREATMENT-METHOD"/>
+</Apply>
+        <Apply function="if">
+          <Apply function="greaterThan">
+            <FieldRef field="Var"/>
+            <Apply function="computeBounds">
+              <FieldRef field="RobustMean"/>
+              <FieldRef field="RobustSD"/>
+              <FieldRef field="CutOff"/>
+              <FieldRef field="AnalysisWeight"/>
+              <Constant>1</Constant>
+</Apply>
+</Apply>
+          <Apply function="treatOutlier">
+            <Apply function="computeBounds">
+              <FieldRef field="RobustMean"/>
+              <FieldRef field="RobustSD"/>
+              <FieldRef field="CutOff"/>
+              <FieldRef field="AnalysisWeight"/>
+              <Constant>1</Constant>
+</Apply>
+            <FieldRef field="OUTLIER-TREATMENT-METHOD"/>
+</Apply>
+          <FieldRef field="Var"/>
+</Apply>
+</Apply>
+</DefineFunction>    <DerivedField dataType="double" displayName="Perimeter" name="Perimeter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Perimeter"/>
+        <PredictivePower value="0.667021228558862"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.906049137982819" rightMargin="2.92473118279569"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Perimeter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.358888989007027</Constant>
+        <Constant dataType="double">1.27799850526289</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Extend" name="Extend_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Extend"/>
+        <PredictivePower value="0.0622309953261622"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-2.16666666666666" rightMargin="2"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Extend"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.166666666666665</Constant>
+        <Constant dataType="double">1.03500003440824</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Diameter" name="Diameter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Diameter"/>
+        <PredictivePower value="0.665287376889957"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.10975387420237" rightMargin="3.05050136736554"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Diameter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.261777575205104</Constant>
+        <Constant dataType="double">1.38458947967102</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Area" name="Area_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Area"/>
+        <PredictivePower value="0.700810421704205"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.455909229657621" rightMargin="6.2157746892472"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Area"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">1.02181514603546</Constant>
+        <Constant dataType="double">2.44818449252576</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Circularity_#2" name="Circularity_#2_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Circularity_#2"/>
+        <PredictivePower value="0.0580677382520625"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-2.99999999999999" rightMargin="1.12499999999999"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Circularity_#2"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.490624999999998</Constant>
+        <Constant dataType="double">1.21929844661718</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minimum_Ferets_Diameter" name="Minimum_Ferets_Diameter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minimum_Ferets_Diameter"/>
+        <PredictivePower value="0.670870025690777"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.586513697026457" rightMargin="2.81713884336221"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minimum_Ferets_Diameter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.460834699133693</Constant>
+        <Constant dataType="double">1.16374097264913</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Maximum_Ferets_Diameter" name="Maximum_Ferets_Diameter_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Maximum_Ferets_Diameter"/>
+        <PredictivePower value="0.668409190655392"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.04067660088602" rightMargin="3.43878372935964"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Maximum_Ferets_Diameter"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.41003826016915</Constant>
+        <Constant dataType="double">1.49339242157002</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Major_Axis" name="Major_Axis_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Major_Axis"/>
+        <PredictivePower value="0.668040557360098"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.900247320692498" rightMargin="3.3318219291014"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Major_Axis"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.445336974443528</Constant>
+        <Constant dataType="double">1.42178208056069</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minor_Axis" name="Minor_Axis_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minor_Axis"/>
+        <PredictivePower value="0.668167614934882"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.575631282177004" rightMargin="2.7484677617063"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minor_Axis"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.422720029418975</Constant>
+        <Constant dataType="double">1.14733373877996</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Boundary_Size" name="Boundary_Size_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Boundary_Size"/>
+        <PredictivePower value="0.672208351577439"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.906087408949011" rightMargin="3.13982830385015"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Boundary_Size"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.407267819979187</Constant>
+        <Constant dataType="double">1.35021888055095</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Boxivity" name="Boxivity_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Boxivity"/>
+        <PredictivePower value="0.126732000266704"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-2.75" rightMargin="0.625"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Boxivity"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.4125</Constant>
+        <Constant dataType="double">1.08685325596421</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Minimum_projection_area" name="Minimum_projection_area_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Minimum_projection_area"/>
+        <PredictivePower value="0.515190172232288"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.395928791561728" rightMargin="2.42768701587832"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Minimum_projection_area"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.401178822450696</Constant>
+        <Constant dataType="double">1.01299435875457</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Maximum_projection_area" name="Maximum_projection_area_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Maximum_projection_area"/>
+        <PredictivePower value="0.527902672635015"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396138357804356" rightMargin="2.68487539769653"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Maximum_projection_area"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.454526920006988</Constant>
+        <Constant dataType="double">1.10804216926246</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Polarizability" name="Polarizability_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Polarizability"/>
+        <PredictivePower value="0.519164191512464"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396697893192688" rightMargin="2.52166758737134"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Polarizability"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.414598194427152</Constant>
+        <Constant dataType="double">1.05177487967526</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MaxEStateIndex" name="MaxEStateIndex_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MaxEStateIndex"/>
+        <PredictivePower value="0.508568907254598"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.397297485947881" rightMargin="2.38088547710007"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MaxEStateIndex"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.378399656577957</Constant>
+        <Constant dataType="double">1.00475721344948</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MinEStateIndex" name="MinEStateIndex_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MinEStateIndex"/>
+        <PredictivePower value="0.618919362588108"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.0502059724405428" rightMargin="3.1348904719754"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MinEStateIndex"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.664207738144863</Constant>
+        <Constant dataType="double">1.19855521938041</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MinAbsEStateIndex" name="MinAbsEStateIndex_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MinAbsEStateIndex"/>
+        <PredictivePower value="0.619239260523276"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.0176612013382781" rightMargin="3.1350438016952"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MinAbsEStateIndex"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.669828704492132</Constant>
+        <Constant dataType="double">1.19533378383543</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="FpDensityMorgan1" name="FpDensityMorgan1_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="FpDensityMorgan1"/>
+        <PredictivePower value="0.51875726390867"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.397611800235098" rightMargin="2.58100022675082"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="FpDensityMorgan1"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.41919920904527</Constant>
+        <Constant dataType="double">1.07907202689884</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Kappa1" name="Kappa1_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Kappa1"/>
+        <PredictivePower value="0.516171610878905"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396391131570609" rightMargin="2.45593098028594"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Kappa1"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.403029505587756</Constant>
+        <Constant dataType="double">1.02610727371552</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Kappa3" name="Kappa3_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Kappa3"/>
+        <PredictivePower value="0.584704860855073"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.236608533451317" rightMargin="3.07825841710425"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Kappa3"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.602145846202412</Constant>
+        <Constant dataType="double">1.20360618481947</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="SlogP_VSA3" name="SlogP_VSA3_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="SlogP_VSA3"/>
+        <PredictivePower value="0.506550779147488"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396863502197337" rightMargin="2.30405655916277"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="SlogP_VSA3"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.365938910158096</Constant>
+        <Constant dataType="double">0.974233494911576</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="EState_VSA8" name="EState_VSA8_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="EState_VSA8"/>
+        <PredictivePower value="0.621857262448138"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="0" rightMargin="3.13962281913765"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="EState_VSA8"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.67573899288651</Constant>
+        <Constant dataType="double">1.19546462348329</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="EState_VSA9" name="EState_VSA9_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="EState_VSA9"/>
+        <PredictivePower value="0.531215492298271"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396570645921844" rightMargin="2.80206418126387"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="EState_VSA9"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.478968718152422</Constant>
+        <Constant dataType="double">1.15142747060614</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="MolMR" name="MolMR_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="MolMR"/>
+        <PredictivePower value="0.51508405175472"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.39500118226894" rightMargin="2.58380799336903"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="MolMR"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.457816342854915</Constant>
+        <Constant dataType="double">1.05749676355697</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Formation_Energy" name="Formation_Energy_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Formation_Energy"/>
+        <PredictivePower value="0.364678086678947"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.17489442375395" rightMargin="0.397327510082031"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Formation_Energy"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">-0.120804170886148</Constant>
+        <Constant dataType="double">0.58459156634357</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Count" name="Count_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Count"/>
+        <PredictivePower value="0.415590146578351"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396432344100615" rightMargin="2.04149367631571"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Count"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.369734442472238</Constant>
+        <Constant dataType="double">0.880811211968946</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="NP_volume" name="NP_volume_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="NP_volume"/>
+        <PredictivePower value="0.522423984740679"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.396163253418938" rightMargin="2.56986826095076"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="NP_volume"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.429597724081022</Constant>
+        <Constant dataType="double">1.06616612742961</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="NP_concentration" name="NP_concentration_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="NP_concentration"/>
+        <PredictivePower value="0.0177506941654248"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-0.62375" rightMargin="19.7480222567586"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="NP_concentration"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">2.30659375</Constant>
+        <Constant dataType="double">5.81380950225285</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>    <DerivedField dataType="double" displayName="Primary_size" name="Primary_size_transformed" optype="continuous">
+      <Extension extender="spss.com">
+        <Action parameter="3" reasonKey="OutlierTrim2ExtremeValue" stepKey="Outliers"/>
+        <UsageType value="enable"/>
+        <ClassOfField value="transformed feature"/>
+        <SourceField value="Primary_size"/>
+        <PredictivePower value="0.309852828762068"/>
+        <HasMissingValues value="false"/>
+</Extension>
+      <Extension extender="spss.com">
+        <Interval closure="closedClosed" leftMargin="-1.03658536585365" rightMargin="1.21951219512195"/>
+</Extension>
+      <Apply function="outlierHandle">
+        <FieldRef field="Primary_size"/>
+        <Constant dataType="string">asExtremeValues</Constant>
+        <Constant dataType="double">0.0891768292682931</Constant>
+        <Constant dataType="double">0.672172024384393</Constant>
+        <Constant dataType="double">3</Constant>
+        <Constant dataType="double">1</Constant>
+</Apply>
+</DerivedField>  </TransformationDictionary><MiningModel algorithmName="boosting" functionName="regression"><Extension extender="spss.com" name="modelID" value="10"/><MiningSchema><Extension extender="spss.com" name="DerivedFields">
+        <MiningField name="Area_transformed"/>
+        <MiningField name="Count_transformed"/>
+        <MiningField name="NP_concentration_transformed"/>
+        <MiningField name="EState_VSA8_transformed"/>
+      </Extension><MiningField name="Change_percent" usageType="predicted"/><MiningField importance="0.430863879426266" name="Area"/><MiningField importance="0.208675437629751" name="Count"/><MiningField importance="0.0097615196277048" name="NP_concentration"/><MiningField importance="0.350699163316279" name="EState_VSA8"/></MiningSchema><ModelExplanation><PredictiveModelQuality dataUsage="training" meanSquaredError="0.0218529937325957" r-squared="0.763007775939142" targetField="Change_percent"><LiftData><ModelLiftGraph><LiftGraph><XCoordinates><Array n="20" type="int">2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40</Array></XCoordinates><YCoordinates><Array n="20" type="real">0.36 0.5 0.26 0.18 0.02 0.03 0.03 0.02 0.03 -0.01 0.25 0.37 -0.1 0.08 0.17 0.02 -0.47 -0.55 -1.2 -1.97</Array></YCoordinates><BoundaryValues><Array n="20" type="real">0.13115119870311 0.107086089560699 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.0942505140514172 0.089675896312697 0.0802770935643609 0.0477626626097643 0.0477626626097643 0.0477626626097643 0.00622340951944217 -0.00865975569984712 -0.0614900824239495 -0.547009653099899 -0.547009653099899 -0.682919918978341 -0.682919918978341</Array></BoundaryValues><BoundaryValueMeans><Array n="20" type="real">0.143183753274315 0.108305270585068 0.103846572739622 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.0974287849849816 0.0910169511997931 0.084052378727651 0.0602445929237725 0.0477626626097643 0.0477626626097643 0.0251805756086803 -0.00470932895007363 -0.0390938023056954 -0.313438153547871 -0.547009653099899 -0.6225153563657 -0.682919918978341</Array></BoundaryValueMeans></LiftGraph></ModelLiftGraph></LiftData></PredictiveModelQuality><PredictiveModelQuality dataUsage="test" meanSquaredError="0.0356946144708789" r-squared="0" targetField="Change_percent"><LiftData><ModelLiftGraph><LiftGraph><XCoordinates><Array n="13" type="int">1 2 3 4 5 6 7 8 9 10 11 12 13</Array></XCoordinates><YCoordinates><Array n="13" type="real">0.1 0.03 0.17 0.05 0.06 0.01 0.02 0.01 0.02 0.1 0.07 -0.15 -0.09</Array></YCoordinates><BoundaryValues><Array n="13" type="real">0.155216307845521 0.155216307845521 0.13115119870311 0.13115119870311 0.107086089560699 0.100607055918546 0.100607055918546 0.100607055918546 0.0148919593605814 -0.00865975569984712 -0.0166975221874413 -0.562110793753059 -0.562110793753059</Array></BoundaryValues><BoundaryValueMeans><Array n="13" type="real">0.155216307845521 0.155216307845521 0.13115119870311 0.13115119870311 0.107086089560699 0.100607055918546 0.100607055918546 0.100607055918546 0.0148919593605814 -0.00865975569984712 -0.0166975221874413 -0.562110793753059 -0.562110793753059</Array></BoundaryValueMeans></LiftGraph></ModelLiftGraph></LiftData></PredictiveModelQuality></ModelExplanation><Segmentation multipleModelMethod="selectAll">
+      <Extension extender="spss.com" name="multipleModelMethod" value="weightedMedian"/>
+      <Segment id="1" weight="1.0084">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="11"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+              <MiningField name="Count_transformed"/>
+            </Extension>
+
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+            <MiningField name="Count"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="2" fValue="47.9027971207946" meanOfSquares="1.33039725383072" pValue="0.0000000000539795" sumOfSquares="2.66079450766145" type="Model"/>
+                <AnovaRow degreesOfFreedom="37" meanOfSquares="0.0277728511442852" sumOfSquares="1.02759549233855" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="3.68839" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="1.02181514603546" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+            <UnivariateStats field="Count_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="2.04149367631571" mean="0.369734442472238" minimum="-0.396432344100615"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-140.46631417846" AICc="-139.799647511793" adj-r-squared="0.706337671822361" fStatistic="47.9027971207946" numOfPredictors="2" numOfRecords="40" numOfRecordsWeighted="40" r-squared="0.721397278395573" sumSquaredError="1.02759549233855" sumSquaredRegression="3.68839" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">0.36 0.53 -0.1 0.37 0.44 0.05 0.03 0.02 0.03 0.02 0.05 0.11 0.2 0.18 -0.01 -0.07 -0.28 -1.44 -1.23 -1.24</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.182201505968578 0.182201505968578 0.149372391882219 0.149372391882219 0.135296406768225 0.0686147657182407 0.0686147657182407 0.0686147657182407 0.0685086480055352 0.0441377416979184 0.0441377416979184 0.0148919593605814 0.0148919593605814 -0.0476123454382302 -0.0476123454382302 -0.0614900824239497 -0.589026841735663 -0.589026841735663 -0.589026841735663 -0.589026841735663</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.182201505968578 0.182201505968578 0.149372391882219 0.149372391882219 0.142334399325222 0.0686147657182407 0.0686147657182407 0.0686147657182407 0.068561706861888 0.0563231948517268 0.0441377416979184 0.0295148505292499 0.0148919593605814 -0.0202533988267884 -0.0476123454382302 -0.0545512139310899 -0.325258462079806 -0.589026841735663 -0.589026841735663 -0.589026841735663</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+            <Parameter label="Count_transformed" name="P0000003"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+            <Predictor name="Count_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+            <PPCell parameterName="P0000003" predictorName="Count_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.0526570553237823" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.135275661179763" df="1" parameterName="P0000002"/>
+            <PCell beta="0.0975555967101163" df="1" parameterName="P0000003"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="2" weight="0.36508">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="1"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+            </Extension>
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="1" fValue="83.5746261831615" meanOfSquares="4.3379454595858" pValue="0.0000000000388720" sumOfSquares="4.3379454595858" type="Model"/>
+                <AnovaRow degreesOfFreedom="38" meanOfSquares="0.0519050536951106" sumOfSquares="1.9723920404142" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="6.3103375" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="1.67262407894686" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-116.385296569472" AICc="-116.060972245148" adj-r-squared="0.679209377611053" fStatistic="83.5746261831615" numOfPredictors="1" numOfRecords="25" numOfRecordsWeighted="40" r-squared="0.687434778185128" sumSquaredError="1.9723920404142" sumSquaredRegression="6.3103375" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">2 4 5 7 8 9 11 12 13 14 15 17 19 20 21 22 23 24 27 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">0.26 -0.32 0.17 0.4 0.24 0.03 0.06 0.02 0.01 0.01 0.01 0.28 -0.02 0.1 0.16 -0.08 0.01 -0.02 -0.84 -9.03</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.0876423758395054 0.0861848041181455 0.0861848041181455 0.0861848041181455 0.0861848041181455 0.0751516092901986 0.0751516092901986 0.0751516092901986 0.0751516092901986 0.0751516092901986 0.0395891399265246 0.0395891399265246 0.0329512630093843 0.0329512630093843 -0.00433206953076534 -0.0192160800645849 -0.0192160800645849 -0.0192160800645849 -0.615559008200767 -0.615559008200767</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.0876423758395054 0.0861848041181455 0.0861848041181455 0.0861848041181455 0.0861848041181455 0.0751516092901986 0.0751516092901986 0.0751516092901986 0.0751516092901986 0.0751516092901986 0.0395891399265246 0.0395891399265246 0.0329512630093843 0.0329512630093843 -0.00433206953076534 -0.0192160800645849 -0.0192160800645849 -0.0192160800645849 -0.615559008200767 -0.615559008200767</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.0395891399265246" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.105400884182731" df="1" parameterName="P0000002"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="3" weight="0.402253">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="2"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+              <MiningField name="NP_concentration_transformed"/>
+            </Extension>
+
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+            <MiningField name="NP_concentration"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="2" fValue="45.9685511867263" meanOfSquares="2.64319672497978" pValue="0.0000000000932697" sumOfSquares="5.28639344995955" type="Model"/>
+                <AnovaRow degreesOfFreedom="37" meanOfSquares="0.0575001094605526" sumOfSquares="2.12750405004045" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="7.4138975" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="1.58273819873496" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+            <UnivariateStats field="NP_concentration_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="19.7480222567585" mean="2.66552611283793" minimum="-0.5625"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-111.357198759543" AICc="-110.690532092876" adj-r-squared="0.697526939243286" fStatistic="45.9685511867263" numOfPredictors="2" numOfRecords="20" numOfRecordsWeighted="40" r-squared="0.713038378256451" sumSquaredError="2.12750405004045" sumSquaredRegression="7.4138975" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">1 3 4 7 8 9 10 12 13 14 16 18 19 21 22 26 27 31 35 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">0.23 0.06 0.01 0.69 0.01 0.02 -0.01 0.4 0.02 -0.02 0.02 0.12 0.03 0 0.1 -1.12 -0.27 -0.92 -3.88 -5</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.195700588330756 0.191622369010746 0.191622369010746 0.189660132069492 0.187092026814798 0.179541456488218 0.120050223024983 0.109524451609437 0.0923580060868891 0.0802770935643608 0.0727265232377807 0.00622340951944259 -0.000758902200299727 -0.206644578845685 -0.341996895075538 -0.547009653099901 -0.547009653099901 -0.562110793753061 -0.682919918978343 -0.682919918978343</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.195700588330756 0.191622369010746 0.191622369010746 0.189660132069492 0.187092026814798 0.179541456488218 0.120050223024983 0.109524451609437 0.0923580060868891 0.0802770935643608 0.0727265232377807 0.00622340951944259 -0.000758902200299727 -0.206644578845685 -0.341996895075538 -0.547009653099901 -0.547009653099901 -0.562110793753061 -0.682919918978343 -0.682919918978343</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+            <Parameter label="NP_concentration_transformed" name="P0000003"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+            <Predictor name="NP_concentration_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+            <PPCell parameterName="P0000003" predictorName="NP_concentration_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.142133675397885" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.110870062534594" df="1" parameterName="P0000002"/>
+            <PCell beta="-0.0241618250450565" df="1" parameterName="P0000003"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="4" weight="0.417485">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="3"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+              <MiningField name="NP_concentration_transformed"/>
+            </Extension>
+
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+            <MiningField name="NP_concentration"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="2" fValue="73.1315167756232" meanOfSquares="3.58495627332461" pValue="0.0000000000001396" sumOfSquares="7.16991254664921" type="Model"/>
+                <AnovaRow degreesOfFreedom="37" meanOfSquares="0.0490206744148861" sumOfSquares="1.81376495335079" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="8.9836775" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="1.37461243320312" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+            <UnivariateStats field="NP_concentration_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="19.7480222567585" mean="1.83497089027034" minimum="-0.62375"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-117.738987379716" AICc="-117.07232071305" adj-r-squared="0.787191124995242" fStatistic="73.1315167756232" numOfPredictors="2" numOfRecords="25" numOfRecordsWeighted="40" r-squared="0.798104400636511" sumSquaredError="1.81376495335079" sumSquaredRegression="8.9836775" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">1 2 4 6 7 8 10 11 12 13 14 15 16 19 21 22 23 24 25 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">-0.16 0.17 0.26 0.46 0.01 0.2 0.06 0.23 0.3 0.02 0.01 0.24 0.16 0.6 -0.04 0.01 0.06 0.03 0.14 -11.19</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.189798562036656 0.186771231985183 0.185422261767271 0.179306443481466 0.175364249455108 0.174539595413574 0.173835294883657 0.173190625195661 0.173190625195661 0.161603658312047 0.161603658312047 0.159250049699062 0.0821731216032268 0.0821731216032268 0.0509616808117717 0.0433169079545159 -0.0176976889408441 -0.0254803085380527 -0.363193040015685 -0.785830162672678</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.189798562036656 0.186771231985183 0.185422261767271 0.179306443481466 0.175364249455108 0.174539595413574 0.173835294883657 0.173190625195661 0.173190625195661 0.161603658312047 0.161603658312047 0.159250049699062 0.0821731216032268 0.0821731216032268 0.0509616808117717 0.0433169079545159 -0.0176976889408441 -0.0254803085380527 -0.363193040015685 -0.742000131624412</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+            <Parameter label="NP_concentration_transformed" name="P0000003"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+            <Predictor name="NP_concentration_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+            <PPCell parameterName="P0000003" predictorName="NP_concentration_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.119908222489761" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.123577914601802" df="1" parameterName="P0000002"/>
+            <PCell beta="-0.0244632731432186" df="1" parameterName="P0000003"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="5" weight="1.78895">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="4"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+              <MiningField name="EState_VSA8_transformed"/>
+              <MiningField name="NP_concentration_transformed"/>
+            </Extension>
+
+
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+            <MiningField name="EState_VSA8"/>
+            <MiningField name="NP_concentration"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="3" fValue="78.4116728873433" meanOfSquares="1.81203484903996" pValue="0.0000000000000008" sumOfSquares="5.43610454711987" type="Model"/>
+                <AnovaRow degreesOfFreedom="36" meanOfSquares="0.0231092486911147" sumOfSquares="0.831932952880131" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="6.2680375" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="2.05047535422149" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+            <UnivariateStats field="EState_VSA8_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="3.13962281913765" mean="1.19887846969108" minimum="0"/>
+              <ContStats/>
+</UnivariateStats>
+            <UnivariateStats field="NP_concentration_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="5.625" mean="1.1938125" minimum="-0.62375"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-146.915315240106" AICc="-145.772458097249" adj-r-squared="0.856213256708583" fStatistic="78.4116728873433" numOfPredictors="3" numOfRecords="20" numOfRecordsWeighted="40" r-squared="0.867273775423307" sumSquaredError="0.831932952880131" sumSquaredRegression="6.2680375" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">1 2 4 5 6 7 8 9 12 13 20 21 24 26 27 29 32 35 36 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">0.16 0.02 0.04 0.03 0.01 0.23 0.23 0.3 -0.03 0.02 -1.12 0.24 -0.84 -0.54 -0.47 -0.16 -0.69 -2.91 -0.97 -4</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.23262039919221 0.181325994940727 0.181325994940727 0.175309717655124 0.157260885798316 0.13115119870311 0.107086089560699 0.107086089560699 0.0942505140514174 -0.086237804516666 -0.112243222504747 -0.23244844267109 -0.344926652675688 -0.344926652675688 -0.344926652675688 -0.35344702151841 -0.405089425531716 -0.886391608379938 -0.886391608379938 -0.886391608379938</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.23262039919221 0.181325994940727 0.181325994940727 0.175309717655124 0.157260885798316 0.13115119870311 0.107086089560699 0.107086089560699 0.0942505140514173 -0.086237804516666 -0.112243222504747 -0.23244844267109 -0.344926652675688 -0.344926652675688 -0.344926652675688 -0.35344702151841 -0.405089425531716 -0.886391608379938 -0.886391608379938 -0.886391608379938</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+            <Parameter label="EState_VSA8_transformed" name="P0000003"/>
+            <Parameter label="NP_concentration_transformed" name="P0000004"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+            <Predictor name="EState_VSA8_transformed"/>
+            <Predictor name="NP_concentration_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+            <PPCell parameterName="P0000003" predictorName="EState_VSA8_transformed" value="1"/>
+            <PPCell parameterName="P0000004" predictorName="NP_concentration_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.150129565431413" df="1" parameterName="P0000001"/>
+            <PCell beta="0.068019946257279" df="1" parameterName="P0000002"/>
+            <PCell beta="-0.292344950744483" df="1" parameterName="P0000003"/>
+            <PCell beta="-0.0962604365696444" df="1" parameterName="P0000004"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="6" weight="1.02145">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="5"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="EState_VSA8_transformed"/>
+            </Extension>
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="EState_VSA8"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="1" fValue="66.0023752943947" meanOfSquares="1.91470897547863" pValue="0.0000000007833363" sumOfSquares="1.91470897547863" type="Model"/>
+                <AnovaRow degreesOfFreedom="38" meanOfSquares="0.0290096980137203" sumOfSquares="1.10236852452137" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="3.0170775" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="EState_VSA8_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="3.13962281913765" mean="1.04056789933395" minimum="0"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-139.656735400839" AICc="-139.332411076515" adj-r-squared="0.625008564567833" fStatistic="66.0023752943947" numOfPredictors="1" numOfRecords="21" numOfRecordsWeighted="40" r-squared="0.634623729578914" sumSquaredError="1.10236852452137" sumSquaredRegression="3.0170775" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">1 2 7 9 10 11 12 13 14 15 22 23 27 28 29 32 33 34 35 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">-0.01 0.03 0.5 0.04 0.3 0.03 0.01 0.16 0.2 0.06 0.98 0.02 -0.64 0.06 0.2 -0.84 -0.97 -0.27 -0.47 -1.92</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100446246138093 0.100446246138093 0.0986355869523035 -0.0610035708777873 -0.0610035708777873 -0.0610035708777873 -0.406789355786361 -0.406789355786361 -0.406789355786361 -0.406789355786361 -0.406789355786361</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100607055918546 0.100446246138093 0.100446246138093 0.0986355869523035 -0.0610035708777873 -0.0610035708777873 -0.0610035708777873 -0.406789355786361 -0.406789355786361 -0.406789355786361 -0.406789355786361 -0.406789355786361</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="EState_VSA8_transformed" name="P0000002"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="EState_VSA8_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="EState_VSA8_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.100607055918546" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.161610626796334" df="1" parameterName="P0000002"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="7" weight="0.133045">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="6"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+              <MiningField name="NP_concentration_transformed"/>
+            </Extension>
+
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+            <MiningField name="NP_concentration"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="2" fValue="55.0237008582371" meanOfSquares="3.63811594838363" pValue="0.0000000000081992" sumOfSquares="7.27623189676725" type="Model"/>
+                <AnovaRow degreesOfFreedom="37" meanOfSquares="0.0661190703576419" sumOfSquares="2.44640560323275" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="9.7226375" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="1.8197006842937" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+            <UnivariateStats field="NP_concentration_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="19.7480222567585" mean="3.59105222567586" minimum="-0.6125"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-105.770384300986" AICc="-105.103717634319" adj-r-squared="0.734779400759513" fStatistic="55.0237008582371" numOfPredictors="2" numOfRecords="20" numOfRecordsWeighted="40" r-squared="0.74838045713082" sumSquaredError="2.44640560323275" sumSquaredRegression="9.7226375" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">1 2 3 4 5 6 7 8 9 10 11 12 15 17 21 24 25 31 38 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">0.06 0.17 0.23 0.23 0.02 0.24 0.01 0.16 0.2 0.06 0.02 0 0.42 0.2 -1.12 -0.81 -0.23 -5.82 -6.79 -2</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.262982088476455 0.261561619703648 0.258769649510204 0.255613052237301 0.24764365194096 0.247356931975584 0.240541308076928 0.141692856303718 0.141692856303718 0.122113522030976 0.121063498508436 -0.0351880665002757 -0.0562092521323681 -0.0650574628738116 -0.680167704940688 -0.680167704940688 -0.688059198122946 -0.751191143581011 -0.751191143581011 -0.751191143581011</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.262982088476455 0.261561619703648 0.258769649510204 0.255613052237301 0.24764365194096 0.247356931975584 0.240541308076928 0.141692856303718 0.141692856303718 0.122113522030976 0.121063498508436 -0.0351880665002757 -0.0562092521323681 -0.0650574628738116 -0.680167704940688 -0.680167704940688 -0.688059198122946 -0.751191143581011 -0.751191143581011 -0.751191143581011</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+            <Parameter label="NP_concentration_transformed" name="P0000003"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+            <Predictor name="NP_concentration_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+            <PPCell parameterName="P0000003" predictorName="NP_concentration_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.1931369606713" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.140498121195213" df="1" parameterName="P0000002"/>
+            <PCell beta="-0.0126263890916131" df="1" parameterName="P0000003"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="8" weight="0.266648">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="7"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+            </Extension>
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="1" fValue="82.8488796358025" meanOfSquares="5.45248716683173" pValue="0.0000000000436109" sumOfSquares="5.45248716683174" type="Model"/>
+                <AnovaRow degreesOfFreedom="38" meanOfSquares="0.0658124429781123" sumOfSquares="2.50087283316827" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="7.95336" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="2.09278400506942" minimum="-0.455909229657621"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-106.889585996212" AICc="-106.565261671888" adj-r-squared="0.677282899787463" fStatistic="82.8488796358025" numOfPredictors="1" numOfRecords="20" numOfRecordsWeighted="40" r-squared="0.68555769722881" sumSquaredError="2.50087283316827" sumSquaredRegression="7.95336" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">1 2 5 6 7 8 9 10 14 17 18 21 22 24 25 29 34 35 36 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">0.23 0.23 -0.48 0.2 0.24 0.02 0.03 0.01 0.56 0.3 0.16 0 0.02 -0.56 -0.97 -1.08 -4.85 -0.47 -0.23 -4</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.113406406832024 0.113406406832024 0.111777274981594 0.111777274981594 0.111777274981594 0.0994454433174671 0.0994454433174671 0.0994454433174671 0.0596971752416898 0.0522780022799265 0.0106063207830846 -0.0060295779980408 -0.0060295779980408 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.113406406832024 0.113406406832024 0.111777274981594 0.111777274981594 0.111777274981594 0.0994454433174671 0.0994454433174671 0.0994454433174671 0.0596971752416898 0.0522780022799265 0.0106063207830846 -0.0060295779980408 -0.0060295779980408 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994 -0.672563679728994</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="0.0596971752416898" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.117806852979635" df="1" parameterName="P0000002"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+      <Segment id="9" weight="0.593268">
+        <True/>
+        <GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent">
+          <Extension extender="spss.com" name="modelID" value="9"/>
+          <MiningSchema>
+            <Extension extender="spss.com" name="DerivedFields">
+              <MiningField name="Area_transformed"/>
+            </Extension>
+
+            <MiningField name="Change_percent" usageType="predicted"/>
+            <MiningField name="Area"/>
+          </MiningSchema>
+          <ModelStats>
+            <UnivariateStats field="Change_percent">
+              <Anova>
+                <AnovaRow degreesOfFreedom="1" fValue="117.954854032739" meanOfSquares="6.510026042015" pValue="0.0000000000003275" sumOfSquares="6.510026042015" type="Model"/>
+                <AnovaRow degreesOfFreedom="38" meanOfSquares="0.0551908278417105" sumOfSquares="2.097251457985" type="Error"/>
+                <AnovaRow degreesOfFreedom="39" sumOfSquares="8.6072775" type="Total"/>
+</Anova>
+</UnivariateStats>
+            <UnivariateStats field="Area_transformed">
+              <Counts totalFreq="40"/>
+              <NumericInfo maximum="6.2157746892472" mean="1.79094460350763" minimum="-0.442080391952304"/>
+              <ContStats/>
+</UnivariateStats>
+</ModelStats>          <ModelExplanation>
+            <PredictiveModelQuality AIC="-113.930071847239" AICc="-113.605747522915" adj-r-squared="0.749927629749743" fStatistic="117.954854032739" numOfPredictors="1" numOfRecords="20" numOfRecordsWeighted="40" r-squared="0.756339741807441" sumSquaredError="2.097251457985" sumSquaredRegression="8.6072775" targetField="Change_percent">
+              <LiftData>
+                <ModelLiftGraph>
+                  <LiftGraph>
+                    <XCoordinates>
+                      <Array n="20" type="int">6 7 8 11 13 15 16 17 19 20 21 22 23 24 25 26 27 30 32 40</Array>
+</XCoordinates>
+                    <YCoordinates>
+                      <Array n="20" type="real">-0.96 0.06 0.17 0.72 0.04 0.06 0.01 0.01 0.28 -0.01 0.03 0.1 0 0.01 -0.28 -0.97 -0.27 -2.91 -0.46 -8</Array>
+</YCoordinates>
+                    <BoundaryValues>
+                      <Array n="20" type="real">0.0477626626097644 0.0477626626097644 0.0477626626097644 0.0477626626097644 0.0344026312705007 0.0344026312705007 0.0344026312705007 -0.00865975569984712 -0.00865975569984712 -0.0166975221874413 -0.0166975221874413 -0.0166975221874413 -0.0798666539958426 -0.0798666539958426 -0.801974831462898 -0.801974831462898 -0.801974831462898 -0.801974831462898 -0.801974831462898 -0.801974831462898</Array>
+</BoundaryValues>
+                    <BoundaryValueMeans>
+                      <Array n="20" type="real">0.0477626626097644 0.0477626626097644 0.0477626626097644 0.0477626626097644 0.0344026312705007 0.0344026312705007 0.0344026312705007 -0.00865975569984712 -0.00865975569984712 -0.0166975221874413 -0.0166975221874413 -0.0166975221874413 -0.0798666539958426 -0.0798666539958426 -0.801974831462898 -0.801974831462898 -0.801974831462898 -0.801974831462898 -0.801974831462898 -0.801974831462898</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation>          <ParameterList>
+            <Parameter label="Intercept" name="P0000001"/>
+            <Parameter label="Area_transformed" name="P0000002"/>
+</ParameterList>          <CovariateList>
+            <Predictor name="Area_transformed"/>
+</CovariateList>          <PPMatrix>
+            <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+</PPMatrix>          <ParamMatrix>
+            <PCell beta="-0.00865975569984712" df="1" parameterName="P0000001"/>
+            <PCell beta="-0.127629316605607" df="1" parameterName="P0000002"/>
+</ParamMatrix>        </GeneralRegressionModel>
+      </Segment>
+    </Segmentation></MiningModel><GeneralRegressionModel algorithmName="ALM" functionName="regression" modelName="CSGLM" modelType="generalLinear" targetVariableName="Change_percent"><Extension extender="spss.com" name="modelID" value="0"/><MiningSchema><Extension extender="spss.com" name="DerivedFields">
+        <MiningField name="Area_transformed"/>
+        <MiningField name="Count_transformed"/>
+      </Extension><MiningField name="Change_percent" usageType="predicted"/><MiningField importance="0.751197939260774" name="Area"/><MiningField importance="0.248802060739226" name="Count"/></MiningSchema><ModelStats>
+      <UnivariateStats field="Change_percent">
+        <Anova>
+          <AnovaRow degreesOfFreedom="2" fValue="47.9027971207946" meanOfSquares="1.33039725383072" pValue="0.0000000000539795" sumOfSquares="2.66079450766145" type="Model"/>
+          <AnovaRow degreesOfFreedom="37" meanOfSquares="0.0277728511442852" sumOfSquares="1.02759549233855" type="Error"/>
+          <AnovaRow degreesOfFreedom="39" sumOfSquares="3.68839" type="Total"/>
+</Anova>
+</UnivariateStats>
+      <UnivariateStats field="Area_transformed">
+        <Counts totalFreq="40"/>
+        <NumericInfo maximum="6.2157746892472" mean="1.02181514603546" minimum="-0.455909229657621"/>
+        <ContStats/>
+</UnivariateStats>
+      <UnivariateStats field="Count_transformed">
+        <Counts totalFreq="40"/>
+        <NumericInfo maximum="2.04149367631571" mean="0.369734442472238" minimum="-0.396432344100615"/>
+        <ContStats/>
+</UnivariateStats>
+</ModelStats><ModelExplanation>
+      <PredictiveModelQuality AIC="-140.46631417846" AICc="-139.799647511793" adj-r-squared="0.706337671822361" fStatistic="47.9027971207946" numOfPredictors="2" numOfRecords="40" numOfRecordsWeighted="40" r-squared="0.721397278395573" sumSquaredError="1.02759549233855" sumSquaredRegression="3.68839" targetField="Change_percent">
+        <LiftData>
+          <ModelLiftGraph>
+            <LiftGraph>
+              <XCoordinates>
+                <Array n="20" type="int">2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40</Array>
+</XCoordinates>
+              <YCoordinates>
+                <Array n="20" type="real">0.36 0.53 -0.1 0.37 0.44 0.05 0.03 0.02 0.03 0.02 0.05 0.11 0.2 0.18 -0.01 -0.07 -0.28 -1.44 -1.23 -1.24</Array>
+</YCoordinates>
+              <BoundaryValues>
+                <Array n="20" type="real">0.182201505968578 0.182201505968578 0.149372391882219 0.149372391882219 0.135296406768225 0.0686147657182407 0.0686147657182407 0.0686147657182407 0.0685086480055352 0.0441377416979184 0.0441377416979184 0.0148919593605814 0.0148919593605814 -0.0476123454382302 -0.0476123454382302 -0.0614900824239497 -0.589026841735663 -0.589026841735663 -0.589026841735663 -0.589026841735663</Array>
+</BoundaryValues>
+              <BoundaryValueMeans>
+                <Array n="20" type="real">0.182201505968578 0.182201505968578 0.149372391882219 0.149372391882219 0.142334399325222 0.0686147657182407 0.0686147657182407 0.0686147657182407 0.068561706861888 0.0563231948517268 0.0441377416979184 0.0295148505292499 0.0148919593605814 -0.0202533988267884 -0.0476123454382302 -0.0545512139310899 -0.325258462079806 -0.589026841735663 -0.589026841735663 -0.589026841735663</Array>
+</BoundaryValueMeans>
+</LiftGraph>
+</ModelLiftGraph>
+</LiftData>
+</PredictiveModelQuality>
+</ModelExplanation><ModelExplanation><PredictiveModelQuality dataUsage="training" meanSquaredError="0.0256898873084638" r-squared="0.721397278395573" targetField="Change_percent"><LiftData><ModelLiftGraph><LiftGraph><XCoordinates><Array n="20" type="int">2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40</Array></XCoordinates><YCoordinates><Array n="20" type="real">0.36 0.53 -0.1 0.37 0.44 0.05 0.03 0.02 0.03 0.02 0.05 0.11 0.2 0.18 -0.01 -0.07 -0.28 -1.44 -1.23 -1.24</Array></YCoordinates><BoundaryValues><Array n="20" type="real">0.182201505968578 0.182201505968578 0.149372391882219 0.149372391882219 0.135296406768226 0.0686147657182406 0.0686147657182406 0.0686147657182406 0.0685086480055351 0.0441377416979184 0.0441377416979184 0.0148919593605814 0.0148919593605814 -0.04761234543823 -0.04761234543823 -0.0614900824239495 -0.589026841735661 -0.589026841735661 -0.589026841735661 -0.589026841735661</Array></BoundaryValues><BoundaryValueMeans><Array n="20" type="real">0.182201505968578 0.182201505968578 0.149372391882219 0.149372391882219 0.142334399325222 0.0686147657182406 0.0686147657182406 0.0686147657182406 0.0685617068618879 0.0563231948517268 0.0441377416979184 0.0295148505292499 0.0148919593605814 -0.0202533988267883 -0.04761234543823 -0.0545512139310897 -0.325258462079805 -0.589026841735661 -0.589026841735661 -0.589026841735661</Array></BoundaryValueMeans></LiftGraph></ModelLiftGraph></LiftData></PredictiveModelQuality><PredictiveModelQuality dataUsage="test" meanSquaredError="0.0401080333982319" r-squared="0" targetField="Change_percent"><LiftData><ModelLiftGraph><LiftGraph><XCoordinates><Array n="13" type="int">1 2 3 4 5 6 7 8 9 10 11 12 13</Array></XCoordinates><YCoordinates><Array n="13" type="real">0.1 0.17 0.03 0.05 0.06 0.01 0.01 0.02 0.07 0.02 0.1 -0.15 -0.09</Array></YCoordinates><BoundaryValues><Array n="13" type="real">0.182201505968578 0.182201505968578 0.182201505968578 0.182201505968578 0.182201505968578 0.0686147657182406 0.0685086480055351 0.0685086480055351 0.0441377416979184 0.0148919593605814 0.0148919593605814 -0.589026841735661 -0.589026841735661</Array></BoundaryValues><BoundaryValueMeans><Array n="13" type="real">0.182201505968578 0.182201505968578 0.182201505968578 0.182201505968578 0.182201505968578 0.0686147657182406 0.0685086480055351 0.0685086480055351 0.0441377416979184 0.0148919593605814 0.0148919593605814 -0.589026841735661 -0.589026841735661</Array></BoundaryValueMeans></LiftGraph></ModelLiftGraph></LiftData></PredictiveModelQuality></ModelExplanation><ParameterList>
+      <Parameter label="Intercept" name="P0000001"/>
+      <Parameter label="Area_transformed" name="P0000002"/>
+      <Parameter label="Count_transformed" name="P0000003"/>
+</ParameterList><CovariateList>
+      <Predictor name="Area_transformed"/>
+      <Predictor name="Count_transformed"/>
+</CovariateList><PPMatrix>
+      <PPCell parameterName="P0000002" predictorName="Area_transformed" value="1"/>
+      <PPCell parameterName="P0000003" predictorName="Count_transformed" value="1"/>
+</PPMatrix><ParamMatrix>
+      <PCell beta="0.0526570553237823" df="1" parameterName="P0000001"/>
+      <PCell beta="-0.135275661179763" df="1" parameterName="P0000002"/>
+      <PCell beta="0.0975555967101163" df="1" parameterName="P0000003"/>
+</ParamMatrix></GeneralRegressionModel><Extension extender="spss.com" name="activeModelID" value="10"/></PMML>
