@@ -3,7 +3,7 @@ This file is the supporting information for the paper:
 
 Prediction Models on Biomass and Yield of Rice Affected by Metal (Oxide) Nanoparticles Using Nano-specific Descriptors
 
-Jing Li, Chuanxi Wang, Qing Zhao, Le Yueabc, Weihao Tang, Feiran Chen, Xuesong Cao, and Zhenyu Wang
+Jing Li,  Le Yue, Qing Zhao, Xuesong Cao, Weihao Tang, Feiran Chen, Chuanxi Wang,and Zhenyu Wang
 
 DOI: 
 
